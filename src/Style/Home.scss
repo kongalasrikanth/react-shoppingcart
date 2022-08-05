@@ -199,9 +199,9 @@ p {
 	margin-bottom: 0px !important;
 	font-family: "muli" !important;
 }
-h2,h6{
-	font-family: "muli" !important;
-}
+// h2,h6{
+// 	font-family: "muli" !important;
+// }
 
 .img-container {
 	position: relative;
@@ -1097,7 +1097,7 @@ input[type="checkbox"] {
 	}
 	h4{
 		font-size: 20px;
-		font-family: 'muli';
+		font-family: 'muli',semibold;
 	}
 	p{
 		font-size: 16px;

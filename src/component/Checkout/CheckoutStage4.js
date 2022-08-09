@@ -1,9 +1,12 @@
-import React from 'react'
+import {React,useEffect} from 'react'
 import edit from '../../Images/edit-2.jpg';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-export default function checkout4() {
+export default function Checkout4({ setFooter1 }) {
+  useEffect(() => {
+    setFooter1(true);
+  }, []);
   return (
     <div className='container'>
       <div className='container-Checkout'>

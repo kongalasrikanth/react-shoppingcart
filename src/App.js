@@ -9,7 +9,8 @@ import { useEffect, useState } from 'react';
 import Detail from './component/Navigation/Detail';
 import Review from './component/Checkout/CheckoutStage3';
 import Filter from './component/Products/Filter';
-import Footer from './component/Navigation/Footer';
+import Footer1 from './component/Navigation/Footer1';
+import Footer2 from './component/Navigation/Footer2';
 import Shipping from './component/Checkout/Shipping';
 import Home from './component/Navigation/Home';
 import Checkout from './component/Checkout/CheckoutStage1';
@@ -46,6 +47,7 @@ function App() {
   };
 
   const getCategory = () => category;
+  var [isFooter1Hidden, setIsFooter1Hidden] = useState(false);
   return (
     <>
 
@@ -57,16 +59,19 @@ function App() {
         <Route exact path='/about' element={<Detail />} />
         <Route exact path='/filter' element={<Filter />} />
         <Route exact path='/Productlist' element={<Productlist category="" />} />
-        <Route exact path='/Checkout2' element={<Guestcheckout />} />
-        <Route exact path='/Checkout3' element={<Review />} />
-        <Route exact path='/Checkout4' element={<Checkout4 />} />
-        <Route exact path='/Checkout1' element={<Checkout />} />
-        <Route exact path='/OrderSuccessful' element={<OrderSuccess />} />
+        <Route exact path='/Checkout2' element={<Guestcheckout setFooter1={setIsFooter1Hidden}/>} />
+        <Route exact path='/Checkout3' element={<Review setFooter1={setIsFooter1Hidden}/>} />
+        <Route exact path='/Checkout4' element={<Checkout4 setFooter1={setIsFooter1Hidden}/>} />
+        <Route exact path='/Checkout1' element={<Checkout setFooter1={setIsFooter1Hidden} />} />
+        
+        <Route exact path='/OrderSuccessful' element={<OrderSuccess setFooter1={setIsFooter1Hidden}/>} />
         <Route exact path='/products/:id' element={<Product onAdd={onAdd} />} />
         <Route exact path='/cart' element={<Chekout cartItems={cartItems} onAdd={onAdd} onRemove={onRemove} />} />
         <Route exact path='/Shipping' element={<Shipping cartItems={cartItems} onAdd={onAdd} onRemove={onRemove} />} />
       </Routes>
-      <Footer />
+      
+      {isFooter1Hidden ? null : <Footer1 />}
+      <Footer2 />
     </>
   );
 }

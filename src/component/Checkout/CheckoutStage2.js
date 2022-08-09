@@ -1,6 +1,9 @@
-import React from 'react'
+import {React,useEffect} from 'react'
 import edit from '../../Images/edit-2.jpg';
-export default function Guestcheckout() {
+export default function Guestcheckout({ setFooter1 }) {
+  useEffect(() => {
+    setFooter1(true);
+  }, []);
   return (
     <>
 
@@ -44,7 +47,9 @@ export default function Guestcheckout() {
               <label for="html">Express Delivery (2-5 business days via USPS) $17.95</label><br />
               <input type="radio" id="html" value="HTML" />
               <label for="html">Next Day Delivery (Next business days via FedEx) $53.61</label><br />
-              <button className='main-btn'><p><a href="/Checkout3">CONTINUE TO PAYMENT</a></p></button>
+              <button className='main-btn btn-shipping-1-desktop'><p><a href="/Checkout3">CONTINUE TO PAYMENT</a></p></button>
+              <button className='main-btn btn-shipping-1-mobile'><p><a href="/Checkout3">CONTINUE</a></p></button>
+
               <p>3. Payment Information</p>
             </div></div>
 

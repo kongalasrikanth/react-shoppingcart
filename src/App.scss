@@ -36,13 +36,13 @@ a{
 
     h6 {
       font-weight: 400;
-      font-family: "muli";
+      font-family: "muli" !important;
     }
 
     h5 {
       font-size: 20px;
       font-weight: 600;
-      font-family: "muli";
+      font-family: "muli" !important;
     }
   }
 
@@ -82,26 +82,25 @@ a{
     p {
       font-size: .8rem;
       font-weight: 500;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.5rem !important;
     }
   }
 
   .cartdetails {
-    border: 2px #D1D3D6 solid !important;
+    border: 1px solid #D1D3D6 !important;
     padding: 2rem !important;
-    box-shadow: 5px 10px 8px 10px #0000000d !important;
     border-radius: 0.3rem !important;
 
     h5 {
       font: size 20px;
       font-weight: 600;
-      font-family: "muli";
+      font-family: "muli" !important;
     }
 
     h6 {
       font-size: 16px;
       font-weight: 400;
-      font-family: "muli";
+      font-family: "muli" !important;
       padding-top: 1rem;
     }
 
@@ -156,9 +155,18 @@ a{
 
 @media only screen and (min-width: 320px) and (max-width: 766px) {
   .products .input-group {
-    padding-top: 0.3rem;
-    margin-left: 173px;
-    margin-top: -33px;
+    padding: 1rem 0rem;
+    margin-left: 125px;
+    margin-top: 0px;
+  }
+  .product-imgmb{
+    width: 100px;
+    height: 120px;
+    padding-bottom: 0px !important;
+  }
+  .products .cartdetails{
+    box-shadow: none !important;
+    border: none !important;
   }
   .products {
     h2 {
@@ -218,8 +226,13 @@ margin: 10px 10px !important;
   font-family: Source Serif Pro, Semibold;
 }
 
-.guestcheckout h4 {
-  font: normal normal 600 30px/30px Source Serif Pro;
+.guestcheckout {
+  h4 {
+    font: normal normal 600 30px/30px Source Serif Pro;
+  }
+  h5{
+    font: normal normal 500 20px/20px "muli";
+  }
 }
 
 .btn-shipping-1 {
@@ -228,7 +241,7 @@ margin: 10px 10px !important;
 
 
 .pricing-card {
-  margin-left: 100px;
+  margin-left: 6px;
   border: 1px #D1D3D6 solid;
     padding: 2rem;
     // box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -237,7 +250,7 @@ margin: 10px 10px !important;
 }
 
 .signin-check {
-  margin-left: 100px;
+  margin-left: 6px;
   border: 1px solid #D1D3D6;
   margin-bottom: 10px;
   padding: 0px 18px;
@@ -382,7 +395,7 @@ label {
 }
 
 .sort_1 {
-  height: 31px;
+  height: 24px;
   width: 140px;
   border-radius: 5px;
 
@@ -438,7 +451,7 @@ $blue: #1363DF;
   text-decoration: none;
   color: $black;
   font-size: 16px;
-  font-family: "muli";
+  font-family: "muli" !important;
 }
 
 .foot_ac ul,
@@ -451,18 +464,18 @@ $blue: #1363DF;
 .foot_ac_1 li {
   list-style-type: none;
   padding: 2px;
-  font-family: "muli";
+  font-family: "muli" !important;
 }
 
 .foot-1 {
   padding-top: 1rem;
-  font-family: "muli";
+  font-family: "muli" !important;
 }
 
 .foot_left {
   padding-bottom: 2rem;
   h5{
-    font-family: "muli";
+    font-family: "muli" !important;
     letter-spacing: 10px;
   }
 }
@@ -472,7 +485,7 @@ $blue: #1363DF;
   text-decoration: none;
   color: $black;
   font-size: 16px;
-  font-family: "muli";
+  font-family: "muli" !important;
 }
 
 .foot_return_1 li {
@@ -515,15 +528,28 @@ $blue: #1363DF;
 .footerphone {
   display: none;
 }
-
+.btn-shipping-1-mobile{
+  display: none !important;
+}
 @media only screen and (min-width: 320px) and (max-width: 765px) {
   .foot_rightphone {
-    padding-left: 70px;
     display: flex;
-    gap: 20px;
-    padding-top: 26px;
+    gap: 60px;
+    justify-content: center;
   }
-
+  .btn-shipping-1-mobile{
+    display: block !important;
+  }
+  .btn-shipping-1-desktop{
+    display: none !important;
+  }
+  .cartdetails,.pricing-card{
+    box-shadow: none !important;
+    border: 0px !important;
+  }
+  .review_btn{
+    width: 100% !important;
+  }
   .foot_rightphone a {
     color: $blue;
     font-size: 14px;
@@ -579,24 +605,13 @@ $blue: #1363DF;
   padding-left: 20px;
 }
 
-.checkout_2 {
-  border: 1px solid #D1D3D6;
-
-}
-
 .checkout_4 {
   padding-top: 25px;
 }
 
-.checkout_3 {
-  padding-left: 135px;
-  padding-top: 9px;
-  color: #1363DF;
-}
-
 .checkout_h5 {
   font: normal normal 500 16px/20px Muli;
-  font-family: 'Muli' !important;
+  font-family: "muli" !important;
   padding-left: 20px;
   padding-top: 20px;
 }
@@ -1124,6 +1139,7 @@ $blackcolor: #172026;
 
 .card-img_top {
   width: 100%;
+  height: 362px;
   margin-bottom: 10px;
 }
 
@@ -1132,7 +1148,7 @@ $blackcolor: #172026;
     display: none;
   }
   .card-img_top{
-    height:190px;
+    height:196px;
   }
   .rating-one{
     padding-left: 0px;
@@ -1150,31 +1166,36 @@ $blackcolor: #172026;
 
 .checkout_1 {
   padding-left: 20px;
-  font-family: 'muli';
+  font-family: "muli" !important;
 }
 
 .checkout_2 {
   border: 1px solid #D1D3D6;
-  font-family: 'muli';
+  font-family: "muli" !important;
+  position: relative;
 
 }
 
 .guest-2 {
   border: 1px solid #D1D3D6;
   margin-top: 10px;
-  font-family: 'muli';
+  font-family: "muli" !important;
 
 }
 
 .checkout_4 {
   padding-top: 25px;
-  font-family: 'muli';
+  font-family: "muli" !important;
 }
 
 .checkout_3 {
   display: flex;
   gap:15px;
-  font-family: 'muli';
+  font-family: "muli" !important;
+  color: #1363DF;
+  position: absolute;
+  right: 14px;
+  top: 12px;
 }
 
 .checkout_h5 {
@@ -1217,7 +1238,7 @@ $blackcolor: #172026;
   color: #1f39ff;
   font-size: 14px;
   font-weight: bold;
-  font-family: "muli";
+  font-family: "muli" !important;
 }
 
 .main-text {
@@ -1274,14 +1295,14 @@ a {
 }
 
 .hero-sec .card_1-body {
-  height: 17rem;
+  height: 19rem;
   background-color: #1B252C;
 }
 
 .hero-sec .card_1_title {
   color: white;
   text-align: center;
-  padding-top: 4rem;
+  padding-top: 5rem;
   font-size: 3rem;
   font-family: 'Source Serif Pro', serif;
 }
@@ -1305,7 +1326,7 @@ a {
   margin-left: 11rem;
   margin-top: 1.3rem;
   height: 0.5rem !important;
-  width: 22%;
+  width: 33%;
   opacity: 3;
 }
 
@@ -1468,16 +1489,14 @@ a {
 }
 
 .card-success{
-  width: 390px;
-  height: 320px;
     background-color: #47B5FF;
     display: flex;
     align-items: center;
     vertical-align: middle !important;
     flex-direction: column;
     justify-content: center;
-    gap:55px;
-    padding: 70px;
+    gap:35px;
+    padding: 35px;
 h3{
   text-align: center;
   font-size: 30px;
@@ -1550,7 +1569,7 @@ h3{
   p{
     font-size: 16px;
     color: #fff;
-    font-family: "muli";
+    font-family: "muli" !important;
   }
 }
 
@@ -1613,7 +1632,6 @@ margin-left: 60px !important;
 
 
     .cartdetails {
-      border: 2px #D1D3D6 solid !important;
       padding: 2rem !important;
       border-radius: 0.3rem !important;
     }
@@ -1623,3 +1641,64 @@ margin-left: 60px !important;
         color: #fff !important;
       }
     }
+    
+    
+.Product_card{
+ padding-right: 15px;
+}
+.product_image{
+align-content: end !important;
+background-repeat: no-repeat !important;
+ display: grid !important;
+
+justify-content: end !important;
+ margin: 0 !important;
+padding: 0 !important; width: 100% !important;
+}
+.product_image{
+
+  min-height: 300px !important;
+
+  background-size: cover !important;
+
+}
+
+
+
+@media only screen and(min-width:320px) and (max-width:767px){
+
+  .product_image{
+
+      min-height: 166px !important;
+
+      background-size: cover !important;
+
+  }
+
+
+
+}
+
+@media only screen and(min-width:768px) and (max-width:1279px){
+
+  .product_image{
+
+      min-height: 275px !important;
+
+      background-size: cover !important;
+
+  }
+
+}
+
+@media only screen and(min-width:1441px){
+
+  .product_image{
+
+      min-height: 383px !important;
+
+      background-size: cover !important;
+
+  }
+
+}

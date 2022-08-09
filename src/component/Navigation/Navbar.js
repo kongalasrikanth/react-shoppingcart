@@ -7,6 +7,7 @@ import { FiSearch, FiShoppingBag, FiUser } from "react-icons/fi";
 const categories = [
     {
         displayName: 'Home',
+        
     },
     {
         filter: "women's clothing",

@@ -31,7 +31,6 @@ class Create extends Component {
 
   mySubmitfunction = (event) => {
     event.preventDefault()
-    console.log(this.state)
   }
 
   render() {

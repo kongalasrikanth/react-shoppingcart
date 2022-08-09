@@ -1,11 +1,14 @@
-import React from 'react'
+import {React,useEffect} from 'react'
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 
 
-export default function Checkout() {
+export default function Checkout({ setFooter1 }) {
+  useEffect(() => {
+    setFooter1(true);
+  }, []);
   return (
     <div className='container'>
       <div className='container-Checkout'>
@@ -16,7 +19,7 @@ export default function Checkout() {
         <div className="aem-GridColumn aem-GridColumn--default--7 aem-GridColumn--phone--12">
           <div className='guestcheckout'>
             <h4>Guest Checkout</h4>
-            <p>Contact information</p>
+            <h5>Contact information</h5>
             <p>We’ll use these details to keep you informed on your delivery.</p>
           </div>
           <Form>
@@ -97,7 +100,8 @@ export default function Checkout() {
             </Row>
 
           </Form>
-          <button className='btn-shipping-1'><p><a href="/Checkout2">CONTINUE TO SHIPPING METHOD</a></p></button>
+          <button className='btn-shipping-1 btn-shipping-1-desktop'><p><a href="/Checkout2">CONTINUE TO SHIPPING METHOD</a></p></button>
+          <button className=' btn-shipping-1 btn-shipping-1-mobile'><p><a href="/Checkout2">CONTINUE</a></p></button>
           <Form>
             <Row className="mb-4">
               <Form.Group className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12" controlId="formGridState">

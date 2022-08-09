@@ -2,12 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import Skeleton from 'react-loading-skeleton';
 import ReactPaginate from 'react-paginate';
-import heart from '../../Images/heart.jpg'
-
-
+// import heart from "../Images/heart.jpg";
+// import "../Style/Products.scss"
+import store from '../../redux/store';
+// import '../Style/landing-page.scss'
+import { getProductsdata } from '../../api/productsApi';
 const itemsPerPage = 12;
-
-const Productlist = ({ category }) => {
+const Products = ({ category }) => {
+    console.log(category);
     const [data, setData] = useState([]);
     const [filter, setFilter] = useState(data);
     const [loading, setLoading] = useState(false);
@@ -15,11 +17,18 @@ const Productlist = ({ category }) => {
     useEffect(() => {
         const getProducts = async () => {
             setLoading(true);
-            const response = await fetch("https://fakestoreapi.com/products");
+            await getProductsdata();
             if (componentMounted) {
-                setData(await response.clone().json());
-                const data = await response.json();
+                const productsdata = store.getState();
+                const response = productsdata.allProducts.products;
+                const activeIds = [1, 2, 3, 4, 5, 7, 9, 12, 15, 16, 17, 18, 19, 20]
+                const finaldata = response.filter((item) => {
+                    return activeIds.includes(item.id);
+                });
+                setData(finaldata);
+                const data = finaldata;
                 setFilter(data);
+                console.log(data);
                 setLoading(false);
             }
             return () => {
@@ -28,13 +37,11 @@ const Productlist = ({ category }) => {
         }
         getProducts();
     }, []);
-
     useEffect(() => {
         if (category) {
             setFilter(data.filter((value) => value.category === category));
         }
     }, [category]);
-
     const Loading = () => {
         return (
             <>
@@ -50,14 +57,12 @@ const Productlist = ({ category }) => {
         const [currentItems, setCurrentItems] = useState(null);
         const [pageCount, setPageCount] = useState(0);
         const [itemOffset, setItemOffset] = useState(0);
-
         useEffect(() => {
             const endOffset = itemOffset + itemsPerPage;
             console.log(`Loading items from ${itemOffset} to ${endOffset}`);
             setCurrentItems(filter.slice(itemOffset, endOffset));
             setPageCount(Math.ceil(filter.length / itemsPerPage));
         }, [itemOffset, itemsPerPage]);
-
         const handlePageClick = (event) => {
             const newOffset = (event.selected * itemsPerPage) % filter.length;
             console.log(
@@ -67,51 +72,67 @@ const Productlist = ({ category }) => {
         };
         return (
             <>
-
-                {currentItems?.map((product) => {
-                    return (
-                        <>
-                            <div className="col-md-4 col-sm-6 col-6">
-                                 <div className="card" key={product.id}>
-                                    < NavLink to={`/products/${product.id}`}>
-                                        <img src={product.image} className="card-img_top" alt={product.title} width="319px" height="382px" /></NavLink>
-                                    <div className="card-footer">
-                                        <h5 className="card-title mb-0">{product.title.substring(0, 18)}</h5>
-                                        <p className="card-text lead fw-bold">${product.price}</p>
-                                        <img src={heart} />
-                                    </div>
-                                </div> 
-
-
-
-                                {/* <div className="product-card" key={product.id}>
-                                < NavLink to={`/products/${product.id}`}>
-                                    <div className="product-tumb">
-                                        <img src={product.image} alt={product.title} />
-                                    </div>
-                                    <div className="product-details">
-                                        <h4><a href="">{product.title.substring(0, 18)}</a></h4>
-                                        <div className="product-bottom-details">
-                                            <div className="product-price">${product.price}</div>
-                                            <div className="product-links">
-                                                <a href=""><i className="fa fa-heart"></i></a>
+                <div class="aem-Grid aem-Grid--12">
+                    <div class="aem-Grid aem-Grid--12 aem-Grid-default--9">
+                        {currentItems?.map((product) => {
+                            let backgroundImageURL = product.image;
+                            const containerStyle = {
+                                backgroundImage:
+                                    `url(${backgroundImageURL})`
+                            };
+                            return (
+                                <>
+                                    <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--6 pd-32">
+                                        <div className="Product_card landing" key={product.id}>
+                                            <div className='product_image' style={containerStyle}>
+                                            </div>
+                                            <div className="card-bodydesc">
+                                                < NavLink to={`/products/${product.id}`}>
+                                                    <h5 className="card-title mb-0">{product.title.substring(0, 12)}...</h5>
+                                                </NavLink>
+                                                <p className="card-text lead fw-bold">${product.price}</p>
+                                                {/* <img src={heart} /> */}
                                             </div>
                                         </div>
+                                        {/* <div className='landimg img1'>
+                                        </div>
+                                        <div className='card-desc'>
+                                            <h3><Link to="/women">Shop Women</Link></h3>
+                                            <p>Lorem ipsum dolor sit amet</p>
+                                        </div> */}
                                     </div>
-                                    </NavLink>
-                                </div> */}
-                            </div>
-                        </>
-                    )
-                })}
-                <div className="aem-Grid aem-Grid--12">
-                    <div className="aem-GridColumn aem-GridColumn--default--5">
+                                </>
+                            )
+                        })}
+                    </div>
+                </div>
+                <div class="aem-Grid aem-Grid--12">
+                    <div class="aem-GridColumn aem-GridColumn--default--5">
                         &nbsp;
                     </div>
-                    <div className="aem-GridColumn aem-GridColumn--default--2 paginationone">
-
-                    </div>
-                    <div className="aem-GridColumn aem-GridColumn--default--5">
+                    {/* <div class="aem-GridColumn aem-GridColumn--default--2 paginationone">
+                        <ReactPaginate
+                            nextLabel=">"
+                            onPageChange={handlePageClick}
+                            pageRangeDisplayed={3}
+                            marginPagesDisplayed={2}
+                            pageCount={pageCount}
+                            previousLabel="< "
+                            pageClassName="page-item"
+                            pageLinkClassName="page-link"
+                            previousClassName="page-item"
+                            previousLinkClassName="page-link"
+                            nextClassName="page-item"
+                            nextLinkClassName="page-link"
+                            breakLabel="..."
+                            breakClassName="page-item"
+                            breakLinkClassName="page-link"
+                            containerClassName="pagination"
+                            activeClassName="active"
+                            renderOnZeroPageCount={null}
+                        />
+                    </div> */}
+                    <div class="aem-GridColumn aem-GridColumn--default--5">
                         &nbsp;
                     </div>
                 </div>
@@ -119,19 +140,9 @@ const Productlist = ({ category }) => {
         )
     }
     return (
-
         <div className='product'>
-            <div className="container">
-                <div className="row">
-                </div>
-                <div className="row">
-                    {loading ? <Loading /> : <ShowProducts />}
-
-                </div>
-
-            </div>
+            {loading ? <Loading /> : <ShowProducts />}
         </div>
     )
 }
-
-export default Productlist
+export default Products

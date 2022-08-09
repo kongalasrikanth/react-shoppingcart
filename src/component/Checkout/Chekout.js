@@ -22,7 +22,7 @@ export default function Chekout(props) {
               <div className="aem-GridColumn aem-GridColumn--default--6  aem-GridColumn--phone--12 productimage">
                 <div className="product">
                   <div>
-                    <img alt="Venia_alt" src={item.image} height="180px" width="160px" />
+                    <img className='product-imgmb' alt="Venia_alt" src={item.image} height="180px" width="160px" />
                   </div>
                   <div>
                     <h5>{item.title.substring(0, 18)}</h5>

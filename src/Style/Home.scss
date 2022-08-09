@@ -181,7 +181,7 @@ hr {
 .card {
 	transition: all 1s linear;
 	// width: 349px;
-// height: 320px;
+	// height: 320px;
 	margin: 5px;
 }
 
@@ -199,9 +199,11 @@ p {
 	margin-bottom: 0px !important;
 	font-family: "muli" !important;
 }
-// h2,h6{
-// 	font-family: "muli" !important;
-// }
+
+h2,
+h6 {
+	font-family: "muli" !important;
+}
 
 .img-container {
 	position: relative;
@@ -441,7 +443,7 @@ p {
 }
 
 button {
-	background: #1f39ff;
+	background: #1363Df;
 	color: #fff;
 	border: none !important;
 	padding: 4px;
@@ -650,11 +652,23 @@ input[type="checkbox"] {
 
 @media screen and (max-width: 850px) {
 	h2.title {
+
 		font-size: 3em !important;
+	}
+	.fourset{
+		display:none !important ;
 	}
 
 	ul.breadcrumb {
 		padding: unset;
+	}
+
+	.slider-desktop {
+		display: none;
+	}
+
+	.slider-mobile {
+		display: block !important;
 	}
 
 	.breadcrumbmobile {
@@ -813,21 +827,22 @@ input[type="checkbox"] {
 	font-size: 3rem;
 	font-family: "Source Serif Pro", serif;
 }
-.hr_line{
+
+.hr_line {
 	display: flex;
-    position: relative;
-    right: 225px;
-    gap: 10px;
-    align-items: center;
-    flex-direction: column;
+	position: relative;
+	right: 185px;
+	gap: 10px;
+	align-items: center;
+	flex-direction: column;
 }
 
 .hr_lines hr {
 	background-color: #1f39ff !important;
-    height: 0.5rem !important;
-    margin: 3rem 0rem;
-    width: 100px;
-    opacity: 3;
+	height: 0.5rem !important;
+	margin: 3rem 0rem;
+	width: 100px;
+	opacity: 3;
 }
 
 .color_width1 {
@@ -859,7 +874,7 @@ input[type="checkbox"] {
 }
 
 .card-img-top {
-	height: 15rem !important;
+	height:250px !important;
 	// margin-top: 8px;
 	// width: 98% !important;
 }
@@ -869,74 +884,102 @@ input[type="checkbox"] {
 		display: none !important;
 	}
 }
+
 @media screen and (max-width: 765px) {
-	.desktop_view{
+	.desktop_view {
 		display: none !important;
 	}
-  }
+}
+
+@media screen and (max-width: 1024px) {
+	.section3 {
+		padding: 0px !important;
+	}
+
+	.card-body1 {
+		padding: 0px 16px !important;
+	}
+}
+
 @media only screen and (min-width: 320px) and (max-width: 765px) {
 	.section3 h2 {
 		font-size: 36px !important;
 	}
-	.section3{
+	.category-top{
+		bottom: 0px !important;
+	}
+
+	.section3 {
 		padding: 20px !important;
 	}
-	.hr_lines{
+
+	.hr_lines {
 		display: table;
 		margin: 0 auto;
 	}
-	.card-body1{
-		right: 0px !important;
-    padding: 0px !important;
-    text-align: center;
 
-		h5{
+	.card-body1 {
+		right: 0px !important;
+		padding: 0px !important;
+		text-align: center;
+
+		h5 {
 			font-size: 36px !important;
 		}
 	}
+
 	// .card-img-top1{
 	// 	width: 375px !important;
 	// 	height: auto !important;
 	// }
-	.menshero{
-		width: auto !important;
-		height: auto !important;
+	.menshero {
+		width: 100% !important;
+		height: 100% !important;
 	}
-	.btn-flex{
+
+	.btn-flex {
 		flex-wrap: wrap;
 		gap: 12px;
 		justify-content: center;
 	}
+
 	.hr_lines hr {
 		margin: 2rem 4rem;
 		width: 124px;
 		opacity: 3;
 	}
-	
-	.desktop_view_hero{
+
+	.desktop_view_hero {
 		display: none;
 	}
-	.mobile_view{
+
+	.mobile_view {
 		display: block !important;
 	}
-	.slider-div{
+
+	.slider-div {
 		position: absolute;
 		padding: 19px;
 		background-color: unset !important;
 	}
-.flex{
-	display: block !important;
-}
-.background-grid{
-	width: 100% !important;
-}
+
+	.flex {
+		display: block !important;
+	}
+
+	.background-grid {
+		width: 100% !important;
+	}
+
 	.sort {
 		margin-left: 200px;
 	}
-	.hr_line{
+
+	.hr_line {
 		right: 0px;
-    bottom: 320px;
+		bottom: 316px;
 	}
+
 	.mobile_hero_banner {
 		display: block !important;
 	}
@@ -1024,14 +1067,15 @@ input[type="checkbox"] {
 }
 
 .flex {
-	display: flex ;
+	display: flex;
 	justify-content: center;
 	position: relative;
 	top: -64px;
 	margin-bottom: 30px;
 }
-.legging-flex{
-	display: flex ;
+
+.legging-flex {
+	display: flex;
 	justify-content: center;
 	position: relative;
 	top: -64px;
@@ -1040,44 +1084,47 @@ input[type="checkbox"] {
 
 .card-footer1 {
 	padding: 1rem 1.25rem;
-	background-color:  #1c1b1bcc;
-	
+	background-color: #1c1b1bcc;
+
 	border-bottom: 8px solid #1363DF;
 	color: #fff;
 	position: relative;
-    bottom: 54px;
-	h5{
+	bottom: 54px;
+
+	h5 {
 		font-size: 24px;
 	}
-	p{
+
+	p {
 		font-size: 16px;
 	}
 }
 
 .card-body1 {
 	width: 554px;
-    height: 432px;
-    position: relative;
-    padding: 0px 64px;
-    background-color: #1b252c;
-    vertical-align: middle;
-    display: table-cell;
-    bottom: 15px;
-    right: 20px;
+	height: 350px;
+	position: relative;
+	padding: 0px 64px !important;
+	background-color: #1b252c;
+	vertical-align: middle;
+	display: table-cell;
+	bottom: 15px;
+
 	h5 {
 		color: white;
-		font-size: 48px;
+		font-size: 32px;
 		font-family: 'Source Serif Pro';
 	}
-	h6{
+
+	h6 {
 		font-size: 20px;
 		font-family: 'muli';
 	}
 }
 
 .card-img-top1 {
-	width: 836px;
-    height: 400px;
+	width: 100%;
+	// height: 400px;
 }
 
 .btn-flex {
@@ -1088,18 +1135,21 @@ input[type="checkbox"] {
 
 .section3 {
 	display: revert;
-    vertical-align: middle;
-    padding: 14px 70px;
+	vertical-align: middle;
+	padding: 14px 70px;
+
 	h2 {
 		font-size: 48px;
 		font-weight: bold;
 		font-family: 'Source Serif Pro';
 	}
-	h4{
+
+	h4 {
 		font-size: 20px;
-		font-family: 'muli',semibold;
+		font-family: 'muli';
 	}
-	p{
+
+	p {
 		font-size: 16px;
 		font-family: 'muli';
 	}
@@ -1108,12 +1158,12 @@ input[type="checkbox"] {
 
 .background-grid {
 	background-color: #fff !important;
-	width: 19% ;
+	width: 19%;
 }
 
 .menshero {
-	width: 476px;
-    height: 370px;
+	width: 100%;
+	height: 100%;
 }
 
 // .navbar-dark .navbar-nav .nav-link {
@@ -1123,11 +1173,38 @@ input[type="checkbox"] {
 // .react-slideshow-container .default-nav{
 // 	background: none !important;
 // }
-.line{
-	width:80px;
+.line {
+	width: 80px;
 	height: 5px;
 	background: #1363DF;
 }
-.mobile_view{
+
+.mobile_view {
 	display: none;
+}
+
+.slider-mobile {
+	display: none;
+}
+
+.slider-2 {
+	position: relative;
+	display: flex;
+	justify-content: center;
+
+	div {
+		position: absolute;
+		bottom: 20px;
+		text-align: center;
+	}
+
+	h3 {
+		font-size:40px;
+		font-weight: 600;
+	}
+}
+.category-top{
+	position: relative;
+	background-color: #fff;
+	bottom: 85px;
 }

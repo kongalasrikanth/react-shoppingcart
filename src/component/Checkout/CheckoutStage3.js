@@ -1,9 +1,12 @@
-import React from 'react'
+import {React,useEffect} from 'react'
 import edit from '../../Images/edit-2.jpg';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-export default function Review() {
+export default function Review({ setFooter1 }) {
+    useEffect(() => {
+    setFooter1(true);
+  }, []);
   return (
     <div className='container'>
       <div className='container-Checkout'>
@@ -124,7 +127,8 @@ export default function Review() {
       <hr />
         </div >
       </div>
-      <button className='main-btn'><p><a href="/Checkout4">CONTINUE TO REVIEW ORDER</a></p></button>
+      <button className='main-btn btn-shipping-1-desktop'><p><a href="/Checkout4">CONTINUE TO REVIEW ORDER</a></p></button>
+      <button className='main-btn btn-shipping-1-mobile'><p><a href="/Checkout4">CONTINUE</a></p></button>
     </div>
   )
 }

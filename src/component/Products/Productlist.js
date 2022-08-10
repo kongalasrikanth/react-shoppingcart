@@ -72,8 +72,8 @@ const Products = ({ category }) => {
         };
         return (
             <>
-                <div class="aem-Grid aem-Grid--12">
-                    <div class="aem-Grid aem-Grid--12 aem-Grid-default--9">
+                <div className="aem-Grid aem-Grid--12">
+                    <div className="aem-Grid aem-Grid--12 aem-Grid-default--9">
                         {currentItems?.map((product) => {
                             let backgroundImageURL = product.image;
                             const containerStyle = {
@@ -106,11 +106,11 @@ const Products = ({ category }) => {
                         })}
                     </div>
                 </div>
-                <div class="aem-Grid aem-Grid--12">
-                    <div class="aem-GridColumn aem-GridColumn--default--5">
+                <div className="aem-Grid aem-Grid--12">
+                    <div className="aem-GridColumn aem-GridColumn--default--5">
                         &nbsp;
                     </div>
-                    {/* <div class="aem-GridColumn aem-GridColumn--default--2 paginationone">
+                    {/* <div className="aem-GridColumn aem-GridColumn--default--2 paginationone">
                         <ReactPaginate
                             nextLabel=">"
                             onPageChange={handlePageClick}
@@ -132,7 +132,7 @@ const Products = ({ category }) => {
                             renderOnZeroPageCount={null}
                         />
                     </div> */}
-                    <div class="aem-GridColumn aem-GridColumn--default--5">
+                    <div className="aem-GridColumn aem-GridColumn--default--5">
                         &nbsp;
                     </div>
                 </div>

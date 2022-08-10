@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 import menshero from '../../Images/legging.png';
 import map from '../../Images/map-pin.svg';
 import bottombanner from '../../Images/adventure.jpg';
+import slider from '../../Images/slider.jpeg';
 import { Link } from 'react-router-dom';
 import '../../Style/Home.scss';
 import 'react-slideshow-image/dist/styles.css';
@@ -34,7 +35,7 @@ export default function Home({ name, title }) {
                     <div className='aem-GridColumn aem-GridColumn--default--12 aem-GridColumn--phone--12'>
                         <div className="slider-desktop">
                             <Slide  {...properties} slidesToScroll={1} slidesToShow={1} indicators={true} autoplay={false} responsive={[{
-                                breakpoint: 800,
+                                breakpoint: 1024,
                                 settings: {
                                     slidesToShow: 2,
                                     slidesToScroll: 2
@@ -54,7 +55,6 @@ export default function Home({ name, title }) {
                                     <button>SHOP NOW</button>
                                 </div>
                                 <div style={{
-                                    width: "674px",
                                     height: "445px"
                                 }}><img width="100%" src="https://i.ibb.co/fx96SjS/carousel-01-01.jpg" /></div>
 
@@ -76,8 +76,8 @@ export default function Home({ name, title }) {
                             }]}>
 
                                 <div className="slider-2">
-                                    <img width="100%" src="https://i.ibb.co/fx96SjS/carousel-01-01.jpg" />
-                                    <div>
+                                    <img width="100%" src={slider} />
+                                    <div className="bg-slider">
                                         <h3>Shop the new <br />Signature Collection</h3>
                                         <p>
                                             Lorem ipsum dolor sit amet, consectetur <br /> Lobortis mattis aliquam faucibus purus.
@@ -209,27 +209,60 @@ export default function Home({ name, title }) {
 
 
 
-                <div className="hero_banner ">
-                    <div className="container">
-                        <div className="aem-Grid aem-Grid--12">
-                            <div className="aem-GridColumn aem-GridColumn--default--8 aem-GridColumn--phone--12">
-                                <div className="card-img"><img src={bottombanner} className="card-img-top1" alt="" /></div>
-                            </div>
-                            <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12">
-                                <div className="card-body1">
-                                    <h5 className="card-title1">Conquer your<br /> next adventure</h5>
-                                    <h6 className="card-h6">Lorem Ipsum Dolor Tempor</h6><br />
-                                    <button className='custom-button1'>SHOP DEVICES</button>
-                                    <div className="hr_line">
-                                        <img width={20} src={map} />
-                                        <div className='line'></div>
+                <div className='conqueradventure-desktoptext'>
+                <div className="conqueradventure">
+                    <div className='container'>
+                        <div className="conquer">
+                            <div className="aem-Grid aem-Grid--12">
+                                <div className="aem-GridColumn aem-GridColumn--default--8">
+                                    <div className="conquer-image">
+                                        <img src={bottombanner} alt="women" />
+                                    </div>
+                                </div>
+                                <div className="aem-GridColumn aem-GridColumn--default--4">
+                                    <div className="conquer-title">
+                                        <h3>Conquer your next adventure</h3>
+                                        <p>Lorem Ipsum Dolor Tempor</p>
+                                        <button className='shop-btn'>SHOP DEVICES</button>
+                                        <div className='conquer-navigate'>
+                                                {/* <FiMapPin size={40} /> */}
+                                                <img src={map} />
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className='conqueradventure-mobiletext'>
+                <div className="conqueradventure">
+                    <div className='container'>
+                        <div className="conquer">
+                            <div className="aem-Grid aem-Grid--12">
+                                <div className="aem-GridColumn aem-GridColumn--phone--12">
+                                    <div className="conquer-image">
+                                        <img src={bottombanner} alt="women" />
+                                        <div className='conquer-navigate1'>
+                                                {/* <FiMapPin size={30} /> */}
+                                                <img src={map} />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="aem-GridColumn aem-GridColumn--phone--12">
+
+                                    <div className="conquer-title">
+                                        <h3>Conquer your</h3>
+                                        <p>Lorem Ipsum Dolor Tempor</p>
+                                        <button className='shop-btn'>SHOP DEVICES</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             </div>
         </React.Fragment>
     )

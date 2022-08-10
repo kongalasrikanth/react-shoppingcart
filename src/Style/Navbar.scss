@@ -60,10 +60,11 @@ body {
     text-decoration: none;
 }
 
-.menu-items li:hover {
+.menu-items li :hover {
+    bottom: 0;
     border-bottom: 3px solid #fff;
-    margin-top: 0px;
-}
+    padding-bottom: 20px;
+  }
 
 .navbar a {
     color: #fff;

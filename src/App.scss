@@ -557,6 +557,7 @@ $blue: #1363DF;
 
   .footerphone {
     display: block;
+    padding: 20px 0px;
   }
 
   .footerdesktop {
@@ -1090,6 +1091,8 @@ $blackcolor: #172026;
   .singleset img {
     height: 270px;
     width: 270px;
+    margin: 20px auto;
+    display: block;
   }
 
   .Sweat-wicking h5 {
@@ -1150,9 +1153,7 @@ $blackcolor: #172026;
   .card-img_top{
     height:196px;
   }
-  .rating-one{
-    padding-left: 0px;
-  }
+ 
 }
 
 * {
@@ -1614,7 +1615,7 @@ margin-left: 60px !important;
     border: solid darkgray !important;
     border-width: 0 4px 4px 0 !important;
     display: inline-block !important;
-    padding: 15px !important;
+    padding: 13px !important;
     transform: rotate(-230deg) !important;
     -webkit-transform: rotate(-230deg) !important;}
     
@@ -1625,7 +1626,7 @@ margin-left: 60px !important;
     border: solid darkgray !important;
     border-width: 0 4px 4px 0 !important;
     display: inline-block !important;
-    padding: 15px !important;
+    padding: 13px !important;
     transform: rotate(-45deg) !important;
     -webkit-transform: rotate(-45deg) !important;}
 

@@ -1,4 +1,4 @@
-import {React,useEffect} from 'react'
+import { React, useEffect } from 'react'
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
@@ -25,15 +25,15 @@ export default function Checkout({ setFooter1 }) {
           <Form>
             <Row className="mb-3">
               <div className="aem-Grid aem-Grid--12">
-              <Form.Group className="aem-GridColumn aem-GridColumn--default--5 mr-5 aem-GridColumn--phone--12" controlId="formGridEmail">
-                <Form.Label>Email</Form.Label>
-                <Form.Control type="email" placeholder="abc@xyz.com" />
-              </Form.Group>
+                <Form.Group className="aem-GridColumn aem-GridColumn--default--5 mr-5 aem-GridColumn--phone--12" controlId="formGridEmail">
+                  <Form.Label>Email</Form.Label>
+                  <Form.Control type="email" placeholder="abc@xyz.com" />
+                </Form.Group>
 
-              <Form.Group className="aem-GridColumn aem-GridColumn--default--5 aem-GridColumn--phone--12" controlId="formGridPassword">
-                <Form.Label>Phone Number</Form.Label>
-                <Form.Control type="password" placeholder="(222) 222-2222" />
-              </Form.Group>
+                <Form.Group className="aem-GridColumn aem-GridColumn--default--5 aem-GridColumn--phone--12" controlId="formGridPassword">
+                  <Form.Label>Phone Number</Form.Label>
+                  <Form.Control type="password" placeholder="(222) 222-2222" />
+                </Form.Group>
               </div>
             </Row>
             <Row className="mb-4">
@@ -47,29 +47,29 @@ export default function Checkout({ setFooter1 }) {
               </Form.Group>
             </Row>
             <Row className="mb-3">
-            <div className="aem-Grid aem-Grid--12">
-              <Form.Group className="aem-GridColumn aem-GridColumn--default--5 mr-5 aem-GridColumn--phone--12" controlId="formGridEmail">
-                <Form.Label>First Name</Form.Label>
-                <Form.Control type="email" />
-              </Form.Group>
+              <div className="aem-Grid aem-Grid--12">
+                <Form.Group className="aem-GridColumn aem-GridColumn--default--5 mr-5 aem-GridColumn--phone--12" controlId="formGridEmail">
+                  <Form.Label>First Name</Form.Label>
+                  <Form.Control type="email" />
+                </Form.Group>
 
-              <Form.Group className="aem-GridColumn aem-GridColumn--default--5 aem-GridColumn--phone--12" controlId="formGridPassword">
-                <Form.Label>Last Name</Form.Label>
-                <Form.Control type="password" />
-              </Form.Group>
+                <Form.Group className="aem-GridColumn aem-GridColumn--default--5 aem-GridColumn--phone--12" controlId="formGridPassword">
+                  <Form.Label>Last Name</Form.Label>
+                  <Form.Control type="password" />
+                </Form.Group>
               </div>
             </Row>
             <Row className="mb-3">
               <div className="aem-Grid aem-Grid--12">
-              <Form.Group className="aem-GridColumn aem-GridColumn--default--5 mr-5 aem-GridColumn--phone--12" controlId="formGridEmail">
-                <Form.Label>Street Address</Form.Label>
-                <Form.Control type="email" />
-              </Form.Group>
+                <Form.Group className="aem-GridColumn aem-GridColumn--default--5 mr-5 aem-GridColumn--phone--12" controlId="formGridEmail">
+                  <Form.Label>Street Address</Form.Label>
+                  <Form.Control type="email" />
+                </Form.Group>
 
-              <Form.Group className="aem-GridColumn aem-GridColumn--default--5 aem-GridColumn--phone--12" controlId="formGridPassword">
-                <Form.Label>Street Address 2</Form.Label>
-                <Form.Control type="password" />
-              </Form.Group>
+                <Form.Group className="aem-GridColumn aem-GridColumn--default--5 aem-GridColumn--phone--12" controlId="formGridPassword">
+                  <Form.Label>Street Address 2</Form.Label>
+                  <Form.Control type="password" />
+                </Form.Group>
               </div>
             </Row>
 
@@ -77,25 +77,25 @@ export default function Checkout({ setFooter1 }) {
 
 
             <Row className="mb-3">
-            <div className="aem-Grid aem-Grid--12">
-              <Form.Group className="aem-GridColumn aem-GridColumn--default--5 mr-5 aem-GridColumn--phone--12" controlId="formGridCity">
-                <Form.Label>City</Form.Label>
-                <Form.Control />
-              </Form.Group>
+              <div className="aem-Grid aem-Grid--12">
+                <Form.Group className="aem-GridColumn aem-GridColumn--default--5 mr-5 aem-GridColumn--phone--12" controlId="formGridCity">
+                  <Form.Label>City</Form.Label>
+                  <Form.Control />
+                </Form.Group>
 
-              <Form.Group className="aem-GridColumn aem-GridColumn--default--3 mr-5 aem-GridColumn--phone--12" controlId="formGridState">
-                <Form.Label>State</Form.Label>
-                <Form.Select defaultValue="Choose...">
-                  <option>California</option>
-                  <option>...</option>
-                </Form.Select>
-              </Form.Group>
+                <Form.Group className="aem-GridColumn aem-GridColumn--default--3 mr-5 aem-GridColumn--phone--12" controlId="formGridState">
+                  <Form.Label>State</Form.Label>
+                  <Form.Select defaultValue="Choose...">
+                    <option>California</option>
+                    <option>...</option>
+                  </Form.Select>
+                </Form.Group>
 
-              <Form.Group className="aem-GridColumn aem-GridColumn--default--2 aem-GridColumn--phone--12" controlId="formGridZip">
-                <Form.Label>Zip</Form.Label>
-                <Form.Control type="password" placeholder="91001" />
+                <Form.Group className="aem-GridColumn aem-GridColumn--default--2 aem-GridColumn--phone--12" controlId="formGridZip">
+                  <Form.Label>Zip</Form.Label>
+                  <Form.Control type="password" placeholder="91001" />
 
-              </Form.Group>
+                </Form.Group>
               </div>
             </Row>
 
@@ -104,17 +104,16 @@ export default function Checkout({ setFooter1 }) {
           <button className=' btn-shipping-1 btn-shipping-1-mobile'><p><a href="/Checkout2">CONTINUE</a></p></button>
           <Form>
             <Row className="mb-4">
-              <Form.Group className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12" controlId="formGridState">
 
-                <Form.Select  >
-                  <option>2. Shipping Method</option>
-
-                </Form.Select>
-                <Form.Select >
-                  <option>3. Payment Information</option>
-                  <option>...</option>
-                </Form.Select>
-              </Form.Group>
+              <hr />
+              <h5 >
+                <p>2. Shipping Method</p>
+              </h5>
+              <hr />
+              <h5 >
+                <p>3. Payment Information</p>
+              </h5>
+              <hr />
             </Row>
           </Form>
         </div>

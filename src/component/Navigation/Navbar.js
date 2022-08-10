@@ -5,10 +5,7 @@ import logo from './../../Images/logo.jpeg';
 import { FiSearch, FiShoppingBag, FiUser } from "react-icons/fi";
 
 const categories = [
-    {
-        displayName: 'Home',
-        
-    },
+  
     {
         filter: "women's clothing",
         displayName: 'Women'
@@ -28,38 +25,6 @@ const Navbar = ({ setCategory, selectedCategory, ...props }) => {
     return (
         <React.Fragment>
             <div  >
-                {/* <nav className="navbar navbar-expand-sm bg-#1f39ff navbar-dark py-3 shadow-sm">
-                    <div className="container">
-                        <NavLink className="navbar-brand" to="/"><img width={100} src={logo} /></NavLink>
-                        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span className="navbar-toggler-icon"></span>
-                        </button>
-                        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul className="navbar-nav mx-auto mb-2 mb-lg-0 fw-bold">
-                                <li className='nav-link'><a href='/'>Home</a></li>
-                                {
-                                    categories?.map((category, i) =>
-
-                                        <li key={i} className={`nav-link ${category.filter === selectedCategory ? 'active' : ''} `} aria-current="page" onClick={() => setCategory(category.filter)}>{category.displayName}
-                                        </li>
-
-                                    )
-                                }
-                            </ul>
-                            <div className="buttons">
-                                <NavLink to="/cart" className="cart"> <FiShoppingBag />
-                                    {' '}
-                                    {props.countCartItems ? (
-                                        <span className='badge badge-warning' id='lblCartCount'> {props.countCartItems} </span>
-                                    ) : (
-                                        ''
-                                    )}
-                                </NavLink>{' '}
-                            </div>
-                        </div>
-                    </div>
-                </nav> */}
-
 
 
                 <nav className="navbar">
@@ -72,30 +37,27 @@ const Navbar = ({ setCategory, selectedCategory, ...props }) => {
                         </div>
                         <NavLink className="logo" to="/"> <img width={100} src={logo} /></NavLink>
                         <ul className="menu-items">
-                            {/* <li><a href="#">Home</a></li> */}
+                            <li className="nav-link"><a href="/">Home</a></li>
                             {
                                 categories?.map((category, i) =>
 
-                                    <li key={i} className={`nav-link ${category.filter === selectedCategory ? 'active' : ''} `} aria-current="page" onClick={() => setCategory(category.filter)}>{category.displayName}
+                                    <li key={i} className={`nav-link ${category.filter === selectedCategory ? 'active' : ''} `} aria-current="page" onClick={() => setCategory(category.filter)}><a >{category.displayName}</a>
                                     </li>
 
                                 )
                             }
                         </ul>
                         <NavLink to="/cart" className="cart"> <FiShoppingBag />
-                                    {' '}
-                                    {props.countCartItems ? (
-                                        <span className='badge badge-warning' id='lblCartCount'> {props.countCartItems} </span>
-                                    ) : (
-                                        ''
-                                    )}
-                                </NavLink>{' '}
-                       
+                            {' '}
+                            {props.countCartItems ? (
+                                <span className='badge badge-warning' id='lblCartCount'> {props.countCartItems} </span>
+                            ) : (
+                                ''
+                            )}
+                        </NavLink>{' '}
+
                     </div>
                 </nav>
-
-
-
             </div>
 
         </React.Fragment>

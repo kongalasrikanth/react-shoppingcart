@@ -31,7 +31,8 @@ export default function Review({ setFooter1 }) {
                 </div>
               </div>
               <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12">
-                <p className='checkout_3'><img alt="Venia_alt" width={20} src={edit} />Edit</p>
+                <p className='checkout_3 checkout3-desktop'><img alt="Venia_alt" width={20} src={edit} />Edit</p>
+                <p className='checkout_3 checkout3-mobile '><img alt="Venia_alt" width={20} src={edit} /> </p>
               </div>
             </div>
           </div>
@@ -53,43 +54,19 @@ export default function Review({ setFooter1 }) {
                   </div>
                 </div>
                 <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12">
-                  <p className='checkout_3'><img alt="Venia_alt" width={20} src={edit} />Edit</p>
+                  <p className='checkout_3 checkout3-desktop'><img alt="Venia_alt" width={20} src={edit} />Edit</p>
+                  <p className='checkout_3 checkout3-mobile'><img alt="Venia_alt" width={20} src={edit} /></p>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div className="aem-GridColumn aem-GridColumn--default--5 aem-GridColumn--phone--12">
-          <div className="aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--12"></div>
-          <div className='pricing-card' >
-            <div className="aem-Grid aem-Grid--12">
-              <div className="aem-GridColumn aem-GridColumn--default--6 ">
-                <h6>Subtotal</h6>
-                <h6>Coupon</h6>
-                <h6>Gift Card</h6>
-                <h6>Estimated tax</h6>
-                <h6>Estimated shipping</h6>
-                <h6><strong>Estimated Total</strong></h6>
-              </div>
-              <div className="aem-GridColumn aem-GridColumn--default--6  text-right">
-                <h6>$ 388.00</h6>
-                <h6>- $ 77.60</h6>
-                <h6>- $ 100.00</h6>
-                <h6>$ 23.28</h6>
-                <h6>FREE</h6>
-                <h6><strong>$ 233.68</strong></h6>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className='pay1'>
+          <div className='pay1'>
         <p>3. Payment Information</p>
       </div>
       <input type="radio" id="html" value="HTML" />&nbsp;&nbsp;
       <label for="html">Credit Card</label><br />
       <div className="aem-Grid aem-Grid--12">
-        <div className="aem-GridColumn aem-GridColumn--default--7 aem-GridColumn--phone--12">
+        <div className="aem-GridColumn aem-GridColumn--default--12 aem-GridColumn--phone--12">
           <Row className="mb-3">
           <div className="aem-Grid aem-Grid--12">
             <Form.Group className="aem-GridColumn aem-GridColumn--default--12 aem-GridColumn--phone--12" controlId="formGridEmail">
@@ -129,6 +106,33 @@ export default function Review({ setFooter1 }) {
       </div>
       <button className='main-btn btn-shipping-1-desktop'><p><a href="/Checkout4">CONTINUE TO REVIEW ORDER</a></p></button>
       <button className='main-btn btn-shipping-1-mobile'><p><a href="/Checkout4">CONTINUE</a></p></button>
+        </div>
+        <div className="aem-GridColumn aem-GridColumn--default--5 aem-GridColumn--phone--12">
+          <div className="aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--12"></div>
+          <div className='pricing-card' >
+          <h5 className="shipping-text">Pricing Summary</h5>
+            <div className="aem-Grid aem-Grid--12">
+              <div className="aem-GridColumn aem-GridColumn--default--6 ">
+                <h6>Subtotal</h6>
+                <h6>Coupon</h6>
+                <h6>Gift Card</h6>
+                <h6>Estimated tax</h6>
+                <h6>Estimated shipping</h6>
+                <h6><strong>Estimated Total</strong></h6>
+              </div>
+              <div className="aem-GridColumn aem-GridColumn--default--6  text-right">
+                <h6>$ 388.00</h6>
+                <h6>- $ 77.60</h6>
+                <h6>- $ 100.00</h6>
+                <h6>$ 23.28</h6>
+                <h6>FREE</h6>
+                <h6><strong>$ 233.68</strong></h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
     </div>
   )
 }

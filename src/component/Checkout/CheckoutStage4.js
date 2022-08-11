@@ -31,7 +31,8 @@ export default function Checkout4({ setFooter1 }) {
                 </div>
               </div>
               <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12">
-                <p className='checkout_3'><img alt="Venia_alt" width={20} src={edit} />Edit</p>
+                <p className='checkout_3 checkout3-desktop'><img alt="Venia_alt" width={20} src={edit} />Edit</p>
+                <p className='checkout_3 checkout3-mobile'><img alt="Venia_alt" width={20} src={edit} /></p>
               </div>
             </div>
           </div>
@@ -53,7 +54,8 @@ export default function Checkout4({ setFooter1 }) {
                   </div>
                 </div>
                 <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12">
-                  <p className='checkout_3'><img alt="Venia_alt" width={20} src={edit} />Edit</p>
+                  <p className='checkout_3 checkout3-desktop'><img alt="Venia_alt" width={20} src={edit} />Edit</p>
+                  <p className='checkout_3 checkout3-mobile'><img alt="Venia_alt" width={20} src={edit} /></p>
                 </div>
               </div>
             </div>
@@ -75,16 +77,48 @@ export default function Checkout4({ setFooter1 }) {
                     <p>United States</p> */}
                   </div>
                 </div>
-                <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12">
-                  <p className='checkout_3'><img alt="Venia_alt" width={20} src={edit} />Edit</p>
+                <div className="aem-GridColumn aem-GridColumn--default--12 aem-GridColumn--phone--12">
+                  <p className='checkout_3 checkout3-desktop'><img alt="Venia_alt" width={20} src={edit} />Edit</p>
+                  <p className='checkout_3 checkout3-mobile'><img alt="Venia_alt" width={20} src={edit} /></p>
                 </div>
               </div>
             </div>
           </div>
+          <div className='pay1'>
+                <p>3. items in your order</p>
+            </div>
+            <div className="aem-Grid aem-Grid--12">
+                <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12">
+
+                    <div className='order'>
+                        <img src='https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg' className='iconDetails' />
+
+                        <div className="text">
+                            <h4>Mens Products</h4>
+                            <p>Size: Medium</p>
+                            <p>Color: Storm</p>
+                            <p>Quantity: 2</p>
+                        </div>
+                    </div>
+                </div >
+                <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12">
+                <div className='order'>
+                        <img src='https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_.jpg' className='iconDetails' />
+
+                        <div className="text">
+                            <h4>Womens Products</h4>
+                            <p>Size: Medium</p>
+                            <p>Color: Storm</p>
+                            <p>Quantity: 2</p>
+                        </div>
+                    </div>
+                </div >
+            </div>
         </div>
         <div className="aem-GridColumn aem-GridColumn--default--5 aem-GridColumn--phone--12">
           <div className="aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--12"></div>
           <div className='pricing-card' >
+          <h5 className="shipping-text">Pricing Summary</h5>
             <div className="aem-Grid aem-Grid--12">
               <div className="aem-GridColumn aem-GridColumn--default--6 ">
                 <h6>Subtotal</h6>
@@ -106,36 +140,7 @@ export default function Checkout4({ setFooter1 }) {
           </div>
         </div>
       </div>
-      <div className='pay1'>
-                <p>3. items in your order</p>
-            </div>
-            <div className="aem-Grid aem-Grid--12">
-                <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12">
-
-                    <div className='order'>
-                        <img src='https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg' className='iconDetails' />
-
-                        <div className="text">
-                            <h4>Mens Products</h4>
-                            <p>Size: Medium</p>
-                            <p>Color: Storm</p>
-                            <p>Quantity: 2</p>
-                        </div>
-                    </div>
-                </div >
-                <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12">
-                <div className='order'>
-                        <img src='https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_.jpg' className='iconDetails' />
-
-                        <div className="text">
-                            <h4>Womens Products</h4>
-                            <p>Size: Medium</p>
-                            <p>Color: Storm</p>
-                            <p>Quantity: 2</p>
-                        </div>
-                    </div>
-                </div >
-            </div>
+     
       <button className='main-btn review_btn'><p><a href="/OrderSuccessful">PLACE ORDER</a></p></button>
       <p className='stage4_p'>By clicking confirm order you agree to our <b>Terms and Conditions</b></p>
     </div>

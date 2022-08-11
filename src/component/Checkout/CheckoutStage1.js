@@ -37,7 +37,7 @@ export default function Checkout({ setFooter1 }) {
               </div>
             </Row>
             <Row className="mb-4">
-              <h2>1. Shipping Information</h2>
+              <h2 className="shipping-text">1. Shipping Information</h2>
               <Form.Group className="aem-GridColumn aem-GridColumn--default--12 mr-5 aem-GridColumn--phone--12" controlId="formGridState">
                 <Form.Label>State</Form.Label>
                 <Form.Select defaultValue="Choose...">
@@ -106,11 +106,11 @@ export default function Checkout({ setFooter1 }) {
             <Row className="mb-4">
 
               <hr />
-              <h5 >
+              <h5 className="payment-text">
                 <p>2. Shipping Method</p>
               </h5>
               <hr />
-              <h5 >
+              <h5 className="payment-text">
                 <p>3. Payment Information</p>
               </h5>
               <hr />
@@ -129,6 +129,7 @@ export default function Checkout({ setFooter1 }) {
             </div>
           </div>
           <div className='pricing-card cartdetails' >
+          <h5 className="shipping-text">Pricing Summary</h5>
             <div className="aem-Grid aem-Grid--12">
               <div className="aem-GridColumn aem-GridColumn--default--6 ">
                 <h6>Subtotal</h6>

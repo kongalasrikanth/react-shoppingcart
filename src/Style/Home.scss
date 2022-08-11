@@ -196,13 +196,14 @@ hr {
 }
 
 p {
+	font-size: 13px;
 	margin-bottom: 0px !important;
 	font-family: "muli" !important;
 }
 
 h2,
 h6 {
-	font-family: "muli" !important;
+	font-family: "muli";
 }
 
 .img-container {
@@ -215,7 +216,7 @@ h6 {
 .card-img-top {
 	transition: all 1s linear;
 	width: 100% !important;
-	height: 200px !important;
+	height: 320px !important;
 }
 
 .cart-btn {
@@ -443,13 +444,15 @@ h6 {
 }
 
 button {
-	background: #1363Df;
-	color: #fff;
+	// background: #1363Df;
+	// color: #fff;
 	border: none !important;
 	padding: 4px;
 	width: 220px;
 	height:40px;
 	border-radius: 10px !important;
+	background:#1363Df;
+	color:#fff;
 }
 
 .custom-button {
@@ -874,11 +877,11 @@ input[type="checkbox"] {
 	width: 100%;
 }
 
-.card-img-top {
-	height:250px !important;
-	// margin-top: 8px;
-	// width: 98% !important;
-}
+// .card-img-top {
+// 	// height:250px !important;
+// 	// margin-top: 8px;
+// 	// width: 98% !important;
+// }
 
 @media only screen and (min-width: 700px) {
 	.search_icon {
@@ -907,7 +910,7 @@ input[type="checkbox"] {
 		font-size: 29px !important;
 	}
 	.slider-2 h3{
-		font-size: 29px !important;
+		font-size: 27px !important;
 	}
 	.conqueradventure-desktoptext {
         display: none;
@@ -1205,7 +1208,7 @@ input[type="checkbox"] {
 	}
 
 	h3 {
-		font-size:40px;
+		font-size:25px;
 		font-weight: 600;
 	}
 }

@@ -90,7 +90,7 @@ const Products = ({ category }) => {
                                                 < NavLink to={`/products/${product.id}`}>
                                                     <h5 className="card-title mb-0">{product.title.substring(0, 12)}...</h5>
                                                 </NavLink>
-                                                <p className="card-text lead fw-bold">${product.price}</p>
+                                                <p className="card-text lead">${product.price}</p>
                                                 {/* <img src={heart} /> */}
                                             </div>
                                         </div>

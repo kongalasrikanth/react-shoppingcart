@@ -82,8 +82,9 @@ const Product = (props) => {
                             </p>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor labore dolore magna lorem ipsum dolor sit amet ipsum dolor sit amet, consectetur. Duis tristique sollicitudin nibh sit amet. Tellus integer feugiat scelerisque varius morbi enim nunc faucibus.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor labore dolore magna lorem ipsum dolor sit amet ipsum dolor sit amet, consectetur. Duis tristique sollicitudin nibh sit amet. Tellus integer feugiat scelerisque varius morbi enim nunc faucibus.</p>
                             <hr />
-                            {/* <div className="positive_button">
-                            <div className="input-group w-auto align-items-center">
+                            <h4>Quantity</h4>
+                            <div className="products">
+                            <div style={{paddingTop:"0rem"}}className="input-group w-auto align-items-center">
                   <input
                     type="button"
                     value="-"
@@ -96,7 +97,7 @@ const Product = (props) => {
                     className="button-plus border rounded-circle"
                   />
                 </div>
-                </div> */}
+                </div>
                             <button className="cart-add"
                                 onClick={() => onAdd(product)}
                             >Add to Cart</button>

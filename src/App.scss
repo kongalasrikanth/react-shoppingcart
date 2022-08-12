@@ -156,7 +156,7 @@ a{
 @media only screen and (min-width: 320px) and (max-width: 766px) {
   .products .input-group {
     padding: 1rem 0rem;
-    margin-left: 125px;
+    justify-content: center;
     margin-top: 0px;
   }
   .product-imgmb{
@@ -388,7 +388,7 @@ margin: 10px 10px !important;
 label {
   padding-top: 10px;
   font-family: "muli" !important;
-  font: normal normal 600 16px/16px "muli";
+  font: normal normal 500 16px/16px "muli";
 }
 
 .filter {
@@ -412,7 +412,7 @@ label {
   font: normal normal 600 18px/18px "muli";
 }
 .payment-text p{
-  font: normal normal 600 20px/20px "muli" !important;
+  font: normal normal 500 20px/20px "muli" !important;
   color: #72777F;
   padding: 10px 10px;
 }
@@ -1388,7 +1388,7 @@ a {
   }
 
   .card_1 {
-    margin-top: -77px;
+    margin-top: -34px;
     margin-left: 20px;
     margin-right: 20px;
     margin-bottom: 30px;
@@ -1704,9 +1704,9 @@ padding: 0 !important; width: 100% !important;
 
   }
 
-.card-img-top{
-  height: 150px !important;
-}
+// .card-img-top{
+//   height: 150px !important;
+// }
 
 }
 

@@ -1,4 +1,4 @@
-import {React,useEffect} from 'react'
+import React,{useEffect} from 'react'
 import edit from '../../Images/edit-2.jpg';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';

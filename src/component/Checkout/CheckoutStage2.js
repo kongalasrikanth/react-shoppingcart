@@ -1,4 +1,4 @@
-import {React,useEffect} from 'react'
+import React,{useEffect} from 'react'
 import edit from '../../Images/edit-2.jpg';
 export default function Guestcheckout({ setFooter1 }) {
   useEffect(() => {

@@ -12,7 +12,8 @@ import { BiShareAlt } from "react-icons/bi";
 import { TbLeaf } from "react-icons/tb";
 import { AiOutlineHeart } from "react-icons/ai";
 const Product = (props) => {
-    const { onAdd } = props;
+    const { cartItems, onAdd, onRemove } = props;
+    
     const { id } = useParams();
     const [product, setProduct] = useState([]);
     const [loading, setLoading] = useState(false);
@@ -51,16 +52,16 @@ const Product = (props) => {
                 <div className='container'>
                     <div className="aem-Grid aem-Grid--12">
                         <div className="aem-GridColumn aem-GridColumn--default--1 aem-GridColumn--phone--12 fourset">
-                            <img  src={product.image} alt={product.title} height="100px" width="80px" /><hr />
-                            <img  src={product.image} alt={product.title} height="100px" width="80px" />
-                            <img  src={product.image} alt={product.title} height="100px" width="80px" />
-                            <img  src={product.image} alt={product.title} height="100px" width="80px" />
-                            <img  src={product.image} alt={product.title} height="100px" width="80px" />
+                            <img src={product.image} alt={product.title} height="100px" width="80px" /><hr />
+                            <img src={product.image} alt={product.title} height="100px" width="80px" />
+                            <img src={product.image} alt={product.title} height="100px" width="80px" />
+                            <img src={product.image} alt={product.title} height="100px" width="80px" />
+                            <img src={product.image} alt={product.title} height="100px" width="80px" />
                         </div>
 
                         <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12">
                             <div className='singleset'>
-                                <img  src={product.image} alt={product.title} width="100%" />
+                                <img src={product.image} alt={product.title} width="100%" />
                             </div>
                         </div>
                         <div className="aem-GridColumn aem-GridColumn--default--7 aem-GridColumn--phone--12 rating-one">
@@ -83,21 +84,54 @@ const Product = (props) => {
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor labore dolore magna lorem ipsum dolor sit amet ipsum dolor sit amet, consectetur. Duis tristique sollicitudin nibh sit amet. Tellus integer feugiat scelerisque varius morbi enim nunc faucibus.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor labore dolore magna lorem ipsum dolor sit amet ipsum dolor sit amet, consectetur. Duis tristique sollicitudin nibh sit amet. Tellus integer feugiat scelerisque varius morbi enim nunc faucibus.</p>
                             <hr />
                             <h4>Quantity</h4>
-                            <div className="products">
-                            <div style={{paddingTop:"0rem"}}className="input-group w-auto align-items-center">
-                  <input
-                    type="button"
-                    value="-"
-                    className="button-minus border rounded-circle"
-                  />&nbsp;&nbsp;
-                  <h6 className="quant">01</h6>&nbsp;&nbsp;
-                  <input
-                    type="button"
-                    value="+"
-                    className="button-plus border rounded-circle"
-                  />
-                </div>
-                </div>
+                            <div className="input-group w-auto align-items-center">
+
+                                    <input
+
+                                        type="button"
+
+                                        value="-"
+
+                                        className="button-minus border rounded-circle"
+
+                                        data-field="quantity"
+
+                                        onClick={() => onRemove(product)}
+
+                                    />&nbsp;&nbsp;
+
+                                    <h6 className="quant">{cartItems?.find((x) => x.id === product.id)?.qty || 1}</h6>&nbsp;&nbsp;
+
+                                    <input
+
+                                        type="button"
+
+                                        value="+"
+
+                                        className="button-plus border rounded-circle"
+
+                                        data-field="quantity"
+
+                                        onClick={() => onAdd(product)}
+
+                                    />
+
+                                </div>
+                            {/* <div className="products">
+                                <div style={{ paddingTop: "0rem" }} className="input-group w-auto align-items-center">
+                                    <input
+                                        type="button"
+                                        value="-"
+                                        className="button-minus border rounded-circle"
+                                    />&nbsp;&nbsp;
+                                    <h6 className="quant">1</h6>&nbsp;&nbsp;
+                                    <input
+                                        type="button"
+                                        value="+"
+                                        className="button-plus border rounded-circle"
+                                    />
+                                </div>
+                            </div> */}
                             <button className="cart-add"
                                 onClick={() => onAdd(product)}
                             >Add to Cart</button>

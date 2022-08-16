@@ -13,7 +13,7 @@ import Footer1 from './component/Navigation/Footer1';
 import Footer2 from './component/Navigation/Footer2';
 import Shipping from './component/Checkout/Shipping';
 import Home from './component/Navigation/Home';
-import Checkout from './component/Checkout/CheckoutStage1';
+import CheckoutStage1 from './component/Checkout/CheckoutStage1';
 import Guestcheckout from './component/Checkout/CheckoutStage2';
 import Checkout4 from './component/Checkout/CheckoutStage4';
 import OrderSuccess from './component/Checkout/OrderSuccessful';
@@ -62,7 +62,7 @@ function App() {
         <Route exact path='/Checkout2' element={<Guestcheckout setFooter1={setIsFooter1Hidden}/>} />
         <Route exact path='/Checkout3' element={<Review setFooter1={setIsFooter1Hidden}/>} />
         <Route exact path='/Checkout4' element={<Checkout4 setFooter1={setIsFooter1Hidden}/>} />
-        <Route exact path='/Checkout1' element={<Checkout setFooter1={setIsFooter1Hidden} />} />
+        <Route exact path='/CheckoutStage1' element={<CheckoutStage1 setFooter1={setIsFooter1Hidden} />} />
         
         <Route exact path='/OrderSuccessful' element={<OrderSuccess setFooter1={setIsFooter1Hidden}/>} />
         <Route exact path='/products/:id' element={<Product onAdd={onAdd} />} />

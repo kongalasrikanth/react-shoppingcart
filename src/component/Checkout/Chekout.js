@@ -91,7 +91,7 @@ export default function Chekout(props) {
                   <button
                     className="check"
                   >
-                    <FiLock size={18} />&nbsp;&nbsp;<a href="/Checkout1">CHECKOUT</a>
+                    <FiLock size={18} />&nbsp;&nbsp;<a href="/CheckoutStage1">CHECKOUT</a>
                   </button>
                 </div>
                 <div>

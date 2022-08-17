@@ -42,17 +42,6 @@ const Products = ({ category }) => {
             setFilter(data.filter((value) => value.category === category));
         }
     }, [category]);
-    const Loading = () => {
-        return (
-            <>
-                <div className="col-md-3">
-                    <Skeleton height={350} />
-                    <Skeleton height={350} />
-                    <Skeleton height={350} />
-                </div>
-            </>
-        );
-    }
     const ShowProducts = () => {
         const [currentItems, setCurrentItems] = useState(null);
         const [pageCount, setPageCount] = useState(0);
@@ -70,8 +59,37 @@ const Products = ({ category }) => {
             );
             setItemOffset(newOffset);
         };
+        const [isChecked, setIsChecked] = useState({});
+        const filterProduct = (event) => {
+          const itemcategory = event.target.value
+          console.log("category",event);
+            const updateList = data.filter((x) => x.category === itemcategory);
+            setFilter(updateList);
+        }
         return (
             <>
+            <div className="aem-GridColumn aem-GridColumn--default--3">
+            <div className='container'>
+                <div className='filters_1'>
+                    <div className='filter'>
+                        <h6>Filters</h6>
+                    </div>
+                    <hr />
+                    <div className='attribute'>
+                        <h6>Categories</h6>
+                        <input type="checkbox" id="Jewellery" name="Jewellery" checked={isChecked} value="jewelery" onChange={filterProduct}/>&nbsp;
+                        <label>Jewellery</label> <br />
+                        <input type="checkbox" id="Electronics" name="Electronics" value="electronics" onChange={filterProduct}/>&nbsp;
+                        <label>Electronics</label> <br />
+                        <input type="checkbox" id="Mens" name="Mens" value="men's clothing" onChange={filterProduct}/>&nbsp;
+                        <label>Men's Clothing</label> <br />
+                        <input type="checkbox" id="Womens" name="Womens" value="women's clothing" onChange={filterProduct}/>&nbsp;
+                        <label>Women's Clothing</label> <br />
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div className="aem-GridColumn aem-GridColumn--default--9 aem-GridColumn--phone--12">
                 <div className="aem-Grid aem-Grid--12">
                     <div className="aem-Grid aem-Grid--12 aem-Grid-default--9">
                         {currentItems?.map((product) => {
@@ -106,42 +124,13 @@ const Products = ({ category }) => {
                         })}
                     </div>
                 </div>
-                <div className="aem-Grid aem-Grid--12">
-                    <div className="aem-GridColumn aem-GridColumn--default--5">
-                        &nbsp;
-                    </div>
-                    {/* <div className="aem-GridColumn aem-GridColumn--default--2 paginationone">
-                        <ReactPaginate
-                            nextLabel=">"
-                            onPageChange={handlePageClick}
-                            pageRangeDisplayed={3}
-                            marginPagesDisplayed={2}
-                            pageCount={pageCount}
-                            previousLabel="< "
-                            pageClassName="page-item"
-                            pageLinkClassName="page-link"
-                            previousClassName="page-item"
-                            previousLinkClassName="page-link"
-                            nextClassName="page-item"
-                            nextLinkClassName="page-link"
-                            breakLabel="..."
-                            breakClassName="page-item"
-                            breakLinkClassName="page-link"
-                            containerClassName="pagination"
-                            activeClassName="active"
-                            renderOnZeroPageCount={null}
-                        />
-                    </div> */}
-                    <div className="aem-GridColumn aem-GridColumn--default--5">
-                        &nbsp;
-                    </div>
                 </div>
             </>
         )
     }
     return (
-        <div className='product'>
-            {loading ? <Loading /> : <ShowProducts />}
+        <div className='aem-Grid aem-Grid--12'>
+          <ShowProducts />
         </div>
     )
 }

@@ -1,5 +1,6 @@
 import React,{useEffect} from 'react'
 import edit from '../../Images/edit-2.jpg';
+import{Link}from 'react-router-dom';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -141,7 +142,7 @@ export default function Checkout4({ setFooter1 }) {
         </div>
       </div>
      
-      <button className='main-btn review_btn'><p><a href="/OrderSuccessful">PLACE ORDER</a></p></button>
+      <button className='main-btn review_btn'><p><Link to="/OrderSuccessful">PLACE ORDER</Link></p></button>
       <p className='stage4_p'>By clicking confirm order you agree to our <b>Terms and Conditions</b></p>
     </div>
   )

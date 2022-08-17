@@ -2,6 +2,7 @@ import React,{useEffect} from 'react'
 import edit from '../../Images/edit-2.jpg';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
+import {Link}from 'react-router-dom';
 import Col from 'react-bootstrap/Col';
 export default function Review({ setFooter1 }) {
     useEffect(() => {
@@ -104,8 +105,8 @@ export default function Review({ setFooter1 }) {
       <hr />
         </div >
       </div>
-      <button className='main-btn btn-shipping-1-desktop'><p><a href="/Checkout4">CONTINUE TO REVIEW ORDER</a></p></button>
-      <button className='main-btn btn-shipping-1-mobile'><p><a href="/Checkout4">CONTINUE</a></p></button>
+      <button className='main-btn btn-shipping-1-desktop'><p><Link to="/Checkout4">CONTINUE TO REVIEW ORDER</Link></p></button>
+      <button className='main-btn btn-shipping-1-mobile'><p><Link to="/Checkout4">CONTINUE</Link></p></button>
         </div>
         <div className="aem-GridColumn aem-GridColumn--default--5 aem-GridColumn--phone--12">
           <div className="aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--12"></div>

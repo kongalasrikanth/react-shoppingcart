@@ -2,6 +2,7 @@
 import React,{useEffect} from 'react';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
+import {Link} from'react-router-dom';
 
 
 export default function CheckoutStage1() {
@@ -96,8 +97,8 @@ export default function CheckoutStage1() {
             </Row>
 
           </Form>
-          <button className='btn-shipping-1 btn-shipping-1-desktop'><p><a href="/Checkout2">CONTINUE TO SHIPPING METHOD</a></p></button>
-          <button className=' btn-shipping-1 btn-shipping-1-mobile'><p><a href="/Checkout2">CONTINUE</a></p></button>
+          <button className='btn-shipping-1 btn-shipping-1-desktop'><p><Link to="/Checkout2">CONTINUE TO SHIPPING METHOD</Link></p></button>
+          <button className=' btn-shipping-1 btn-shipping-1-mobile'><p><Link to="/Checkout2">CONTINUE</Link></p></button>
           <Form>
             <Row className="mb-4">
 

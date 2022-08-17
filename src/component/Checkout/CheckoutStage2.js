@@ -1,5 +1,6 @@
 import React,{useEffect} from 'react'
 import edit from '../../Images/edit-2.jpg';
+import {Link}from 'react-router-dom';
 export default function Guestcheckout({ setFooter1 }) {
   useEffect(() => {
     setFooter1(true);
@@ -51,8 +52,8 @@ export default function Guestcheckout({ setFooter1 }) {
               <div className="label-flex">
               <input type="radio" id="html" value="HTML" />
               <label for="html">Next Day Delivery <span style={{fontWeight:400}}>(Next business days via FedEx) $53.61</span></label></div><br />
-              <button className='main-btn btn-shipping-1-desktop'><p><a href="/Checkout3">CONTINUE TO PAYMENT</a></p></button>
-              <button className='main-btn btn-shipping-1-mobile'><p><a href="/Checkout3">CONTINUE</a></p></button>
+              <button className='main-btn btn-shipping-1-desktop'><p><Link to="/Checkout3">CONTINUE TO PAYMENT</Link></p></button>
+              <button className='main-btn btn-shipping-1-mobile'><p><Link to="/Checkout3">CONTINUE</Link></p></button>
 <h5 className="payment-text">
               <p>3. Payment Information</p>
               </h5>

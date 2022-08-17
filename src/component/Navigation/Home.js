@@ -54,9 +54,9 @@ export default function Home({ name, title }) {
                                     </p><br />
                                     <button>SHOP NOW</button>
                                 </div>
-                                <div style={{
-                                    height: "445px"
-                                }}><img width="100%" src="https://i.ibb.co/fx96SjS/carousel-01-01.jpg" /></div>
+                                <div>
+                                    
+                                <img width="100%" src="https://i.ibb.co/zV29T7x/Carousel-image-2cropped1.jpg" /></div>
 
                             </Slide>
                         </div>

@@ -1437,6 +1437,26 @@ input[type="checkbox"] {
     padding: 54px 35px !important;
 	width: 100%;
   }
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+	.slider-1 {
+		padding: 0rem 8rem;
+	}
+}
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+	.slider-1 {
+		padding: 8rem 8rem;
+	}
+}
+@media only screen and (min-width: 1441px) {
+	.slider-1 {
+		padding: 13.1rem 8rem;
+	}
+}
+@media only screen and (min-width: 1981px) {
+	.slider-1 {
+		padding: 20.6rem 8rem;
+	}
+}
 
 
 

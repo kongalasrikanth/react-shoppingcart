@@ -77,7 +77,7 @@ const Products = ({ category }) => {
                     <hr />
                     <div className='attribute'>
                         <h6>Categories</h6>
-                        <input type="checkbox" id="Jewellery" name="Jewellery" checked={isChecked} value="jewelery" onChange={filterProduct}/>&nbsp;
+                        <input type="checkbox" id="Jewellery" name="Jewellery" value="jewelery" onChange={filterProduct}/>&nbsp;
                         <label>Jewellery</label> <br />
                         <input type="checkbox" id="Electronics" name="Electronics" value="electronics" onChange={filterProduct}/>&nbsp;
                         <label>Electronics</label> <br />

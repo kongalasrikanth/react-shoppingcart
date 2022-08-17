@@ -4,10 +4,7 @@ import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 
 
-export default function CheckoutStage1({ setFooter1 }) {
-  useEffect(() => {
-    setFooter1(true);
-  }, []);
+export default function CheckoutStage1() {
   return (
     <div className='container'>
       <div className='container-Checkout'>

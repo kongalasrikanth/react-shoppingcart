@@ -62,7 +62,7 @@ function App() {
         <Route exact path='/Checkout2' element={<Guestcheckout setFooter1={setIsFooter1Hidden}/>} />
         <Route exact path='/Checkout3' element={<Review setFooter1={setIsFooter1Hidden}/>} />
         <Route exact path='/Checkout4' element={<Checkout4 setFooter1={setIsFooter1Hidden}/>} />
-        <Route exact path='/CheckoutStage1' element={<CheckoutStage1 setFooter1={setIsFooter1Hidden} />} />
+        <Route exact path='/CheckoutStage1' element={<CheckoutStage1  />} />
         <Route exact path='/men' element={<Header category="men's clothing" />} />
         <Route exact path='/women' element={<Header category="women's clothing" />} />
         <Route exact path='/jewellery' element={<Header category="jewelery" />} />

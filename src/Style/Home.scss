@@ -630,21 +630,6 @@ input[type="checkbox"] {
 		}
 	}
 
-	&:checked {
-		+ {
-			label {
-				color: #aaaaaa;
-				cursor: pointer;
-				font-size: 9px;
-				font-weight: 600;
-				letter-spacing: 0.3em;
-				padding-left: 10px;
-				padding-top: 6px;
-				position: relative;
-				text-transform: uppercase;
-			}
-		}
-	}
 }
 
 .title_hr {

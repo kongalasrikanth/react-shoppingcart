@@ -39,15 +39,12 @@ const Navbar = ({ setCategory, selectedCategory, ...props }) => {
                         </div>
                         <NavLink className="logo" to="/"> <img width={100} src={logo} /></NavLink>
                         <ul className="menu-items">
-                            <li className="nav-link"><a href="/">Home</a></li>
-                            {
-                                categories?.map((category, i) =>
-
-                                    <li key={i} className={`nav-link ${category.filter === selectedCategory ? 'active' : ''} `} aria-current="page" onClick={() => setCategory(category.filter)}><a >{category.displayName}</a>
-                                    </li>
-
-                                )
-                            }
+                        <li className="menuitem1"><NavLink to="/">Home</NavLink></li>
+                        
+                        <li className="menuitem"><NavLink to="/men">Men</NavLink></li>
+                        <li className="menuitem"><NavLink to="/women">Women</NavLink> </li>
+                        <li className="menuitem"><NavLink to="/electronics">Electronics</NavLink></li>
+                        <li className="menuitem"><NavLink to="/jewellery">Jewellery</NavLink></li>
                         </ul>
                         <NavLink to="/cart" className="cart"> <FiShoppingBag />
                             {' '}

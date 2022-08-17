@@ -1,7 +1,7 @@
 import React from 'react'
 // import menshero from '../../Images/hero.jpg'
 import hero from '../../Images/hero.jpg'
-import women from '../../Images/Womens.jpg'
+import women from '../../Images/women.jpg'
 import Electronics from '../../Images/lappy.png'
 import jewellery from '../../Images/jewellery.jpg'
 let heroimgs = {

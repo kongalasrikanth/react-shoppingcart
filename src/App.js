@@ -55,7 +55,7 @@ function App() {
       <Navbar countCartItems={cartItems.length} setCategory={setCategory} selectedCategory={category} />
       <Routes>
         <Route exact path='/' element={<Home />} />
-        <Route exact path='/Mens' element={<Header category={category} />} />
+        <Route exact path='/Mens' element={<Header  />} />
         <Route exact path='/about' element={<Detail />} />
         <Route exact path='/filter' element={<Filter />} />
         <Route exact path='/Productlist' element={<Productlist category="" />} />
@@ -63,10 +63,10 @@ function App() {
         <Route exact path='/Checkout3' element={<Review setFooter1={setIsFooter1Hidden}/>} />
         <Route exact path='/Checkout4' element={<Checkout4 setFooter1={setIsFooter1Hidden}/>} />
         <Route exact path='/CheckoutStage1' element={<CheckoutStage1 setFooter1={setIsFooter1Hidden} />} />
-        <Route exact path='/men' element={<Home category="men's clothing" />} />
-        <Route exact path='/women' element={<Home category="women's clothing" />} />
-        <Route exact path='/jewellery' element={<Home category="jewelery" />} />
-        <Route exact path='/electronics' element={<Home category="electronics" />} />
+        <Route exact path='/men' element={<Header category="men's clothing" />} />
+        <Route exact path='/women' element={<Header category="women's clothing" />} />
+        <Route exact path='/jewellery' element={<Header category="jewelery" />} />
+        <Route exact path='/electronics' element={<Header category="electronics" />} />
         <Route exact path='/OrderSuccessful' element={<OrderSuccess setFooter1={setIsFooter1Hidden}/>} />
         <Route exact path='/products/:id' element={<Product onAdd={onAdd} />} />
         <Route exact path='/cart' element={<Chekout cartItems={cartItems} onAdd={onAdd} onRemove={onRemove} />} />

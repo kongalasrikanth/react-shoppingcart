@@ -95,12 +95,12 @@ export default function Home({ name, title }) {
                         <div className='aem-GridColumn aem-GridColumn--default--3  aem-GridColumn--phone--12'>
                             <div className="card">
                                 <div className="img-container">
-                                    <Link to="/Mens">
+                                    <Link to="/women">
                                         <img src="https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_.jpg" alt="product" className="card-img-top" />
                                     </Link>
                                 </div>
                                 <div className="card-footer1">
-                                    <h5>Shop Women</h5>
+                                    <h5><NavLink to="/women">Shop Women</NavLink></h5>
                                     <p>
                                         Lorem ipsum dolor sit amet
                                     </p>
@@ -110,12 +110,12 @@ export default function Home({ name, title }) {
                         <div className='aem-GridColumn aem-GridColumn--default--3  aem-GridColumn--phone--12'>
                             <div className="card">
                                 <div className="img-container">
-                                    <Link to="/Mens">
+                                    <Link to="/men">
                                         <img src='https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg' alt="product" className="card-img-top" />
                                     </Link>
                                 </div>
                                 <div className="card-footer1">
-                                    <h5>Shop Men</h5>
+                                <h5><NavLink to="/men">Shop Men</NavLink></h5>
                                     <p>
                                         Lorem ipsum dolor sit amet
                                     </p>
@@ -125,12 +125,12 @@ export default function Home({ name, title }) {
                         <div className='aem-GridColumn aem-GridColumn--default--3  aem-GridColumn--phone--12'>
                             <div className="card">
                                 <div className="img-container">
-                                    <Link to="/Mens">
+                                    <Link to="/jewellery">
                                         <img src="https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg" alt="product" className="card-img-top" />
                                     </Link>
                                 </div>
                                 <div className="card-footer1">
-                                    <h5>Jewellery</h5>
+                                <h5><NavLink to="/jewellery">Jewellery</NavLink></h5>
                                     <p>
                                         Lorem ipsum dolor sit amet
                                     </p>
@@ -140,12 +140,12 @@ export default function Home({ name, title }) {
                         <div className='aem-GridColumn aem-GridColumn--default--3  aem-GridColumn--phone--12'>
                             <div className="card">
                                 <div className="img-container">
-                                    <Link to="/Mens">
+                                    <Link to="/electronics">
                                         <img src="https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_.jpg" alt="product" className="card-img-top" />
                                     </Link>
                                 </div>
                                 <div className="card-footer1">
-                                    <h5>Electronics</h5>
+                                <h5><NavLink to="/electronics">Electronics</NavLink></h5>
                                     <p>
                                         Lorem ipsum dolor sit amet
                                     </p>

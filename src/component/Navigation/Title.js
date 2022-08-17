@@ -4,6 +4,7 @@ import hero from '../../Images/hero.jpg'
 import women from '../../Images/women.jpg'
 import Electronics from '../../Images/lappy.png'
 import jewellery from '../../Images/jewellery.jpg'
+import '../../Style/hero.scss';
 let heroimgs = {
   "Men's": hero,
   "Women's": women,
@@ -29,14 +30,14 @@ function Title({ category }) {
                 <div className="card_1-body">
                 <h5 class="card_1_title">{heading[0]}<br />{heading[1]}</h5>
                   <div className='lines'>
-                    <hr />
+                    <hr className='hrbtm'/>
                   </div>
                 </div>
               </div>
             </div>
             <div className="aem-GridColumn aem-GridColumn--default--8">
               <div className="card-img">
-              <img style={{margin:" 15px 0px"}} src={heroimgs[heading[0]]} class="pic" alt="" />
+              <img className='heroimg' src={heroimgs[heading[0]]}  alt="" />
               </div>
             </div>
           </div>

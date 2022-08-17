@@ -9,6 +9,7 @@ import Swatchfour from '../../Images/Swatch 04.png';
 import { FaStar } from "react-icons/fa";
 import { FiStar } from "react-icons/fi";
 import { BiShareAlt } from "react-icons/bi";
+import '../../Style/products.scss';
 import { TbLeaf } from "react-icons/tb";
 import { AiOutlineHeart } from "react-icons/ai";
 const Product = (props) => {

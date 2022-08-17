@@ -1224,6 +1224,7 @@ input[type="checkbox"] {
 .conquer {
 	background-color: #1B252C;
 	margin-bottom: 50px;
+	
 	position: relative;
   }
   .conquer .aem-Grid.aem-Grid--12 {
@@ -1450,6 +1451,9 @@ input[type="checkbox"] {
 @media only screen and (min-width: 1441px) {
 	.slider-1 {
 		padding: 13.1rem 8rem;
+	}
+	.conquer{
+		margin-top: 2.5rem;
 	}
 }
 @media only screen and (min-width: 1981px) {

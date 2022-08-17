@@ -6,16 +6,18 @@ import { FiSearch, FiShoppingBag, FiUser } from "react-icons/fi";
 
 const categories = [
   
+    
+    {
+        filter: "men's clothing",
+        displayName: 'Men'
+    },
     {
         filter: "women's clothing",
         displayName: 'Women'
     },
     {
-        filter: "men's clothing",
-        displayName: 'Men'
-    }, {
         filter: "jewelery",
-        displayName: 'Smart Gear'
+        displayName: 'jewelery'
     }, {
         filter: "electronics",
         displayName: 'Accessories'

@@ -7,7 +7,7 @@ import Breadcrumb from '../Products/Breadcrumb';
 function Header({ category }) {
     return (
         <>
-            <Title />
+            <Title category={category}/>
             <div>
                 <Breadcrumb />
             </div>

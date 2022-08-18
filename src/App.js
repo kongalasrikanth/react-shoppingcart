@@ -61,13 +61,14 @@ function App() {
         <Route exact path='/Productlist' element={<Productlist category="" />} />
         <Route exact path='/Checkout2' element={<Guestcheckout setFooter1={setIsFooter1Hidden}/>} />
         <Route exact path='/Checkout3' element={<Review setFooter1={setIsFooter1Hidden}/>} />
-        <Route exact path='/Checkout4' element={<Checkout4 setFooter1={setIsFooter1Hidden}/>} />
+        <Route exact path='/Checkout4' element={<Checkout4 setFooter1={setIsFooter1Hidden} cartItems={cartItems}/>} />
+
         <Route exact path='/CheckoutStage1' element={<CheckoutStage1  />} />
         <Route exact path='/men' element={<Header category="men's clothing" />} />
         <Route exact path='/women' element={<Header category="women's clothing" />} />
         <Route exact path='/jewellery' element={<Header category="jewelery" />} />
         <Route exact path='/electronics' element={<Header category="electronics" />} />
-        <Route exact path='/OrderSuccessful' element={<OrderSuccess setFooter1={setIsFooter1Hidden}/>} />
+        <Route exact path='/OrderSuccessful' element={<OrderSuccess setFooter1={setIsFooter1Hidden} cartItems={cartItems}/>} />
         <Route exact path='/products/:id' element={<Product onAdd={onAdd} />} />
         <Route exact path='/cart' element={<Chekout cartItems={cartItems} onAdd={onAdd} onRemove={onRemove} />} />
         <Route exact path='/Shipping' element={<Shipping cartItems={cartItems} onAdd={onAdd} onRemove={onRemove} />} />

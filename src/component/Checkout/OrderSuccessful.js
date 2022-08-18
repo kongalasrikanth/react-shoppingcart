@@ -2,10 +2,11 @@ import {React,useEffect} from 'react'
 import facebook from '../../Images/facebook.png';
 import instagram from '../../Images/instagram.png';
 import twitter from '../../Images/twitter.png';
-export default function Review({ setFooter1 }) {
-    useEffect(() => {
-        setFooter1(true);
-      }, []);
+export default function Review(props ) {
+    const {cartItems}=props
+    // useEffect(() => {
+    //     setFooter1(true);
+    //   }, []);
     return (
         <div className='container'>
             <div className='container-Checkout'>
@@ -55,22 +56,29 @@ export default function Review({ setFooter1 }) {
             <div className='pay1'>
                 <p>3. items in your order</p>
             </div>
-            <div className="aem-Grid aem-Grid--12">
-                <div className="aem-GridColumn aem-GridColumn--default--7 aem-GridColumn--phone--12">
-
-                    <div className='order'>
-                        <img src='https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg' className='iconDetails' />
-
-                        <div className="text">
-                            <h4>Mens Products</h4>
-                            <p>Size: Medium</p>
-                            <p>Color: Storm</p>
-                            <p>Quantity: 1</p>
-                        </div>
-                    </div>
-                </div >
+            
                 
+            <div className="order aem-Grid aem-Grid--12">
+            {cartItems.map((item) => (
+                <div key={item.id} className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12">
+                
+           
+                <div >
+                  <div>
+                    <img className='iconDetails' alt="Venia_alt" src={item.image}  />
+                  </div>
+                  <div className='text'>
+                    <h5>{item.title.substring(0, 18)}</h5>
+                    <h6>Size : Medium</h6>
+                    <h6>Color : Storm</h6>
+                    <h6>${item.price}</h6>
+                  </div>
                 </div>
+              </div>
+              
+              ))}
+            </div>
+            
                 <div className="aem-Grid aem-Grid--12">
                 <div className="aem-GridColumn aem-GridColumn--default--7 aem-GridColumn--phone--12">
                     <p>You will also receive an email with the details and we will let you know when your order has shipped.</p>

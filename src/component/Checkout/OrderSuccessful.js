@@ -56,7 +56,7 @@ export default function Review({ setFooter1 }) {
                 <p>3. items in your order</p>
             </div>
             <div className="aem-Grid aem-Grid--12">
-                <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12">
+                <div className="aem-GridColumn aem-GridColumn--default--7 aem-GridColumn--phone--12">
 
                     <div className='order'>
                         <img src='https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg' className='iconDetails' />
@@ -65,23 +65,14 @@ export default function Review({ setFooter1 }) {
                             <h4>Mens Products</h4>
                             <p>Size: Medium</p>
                             <p>Color: Storm</p>
-                            <p>Quantity: 2</p>
+                            <p>Quantity: 1</p>
                         </div>
                     </div>
                 </div >
-                <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12">
-                <div className='order'>
-                        <img src='https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_.jpg' className='iconDetails' />
-
-                        <div className="text">
-                            <h4>Womens Products</h4>
-                            <p>Size: Medium</p>
-                            <p>Color: Storm</p>
-                            <p>Quantity: 2</p>
-                        </div>
-                    </div>
-                </div >
-                <div className="aem-GridColumn aem-GridColumn--default--8 aem-GridColumn--phone--12">
+                
+                </div>
+                <div className="aem-Grid aem-Grid--12">
+                <div className="aem-GridColumn aem-GridColumn--default--7 aem-GridColumn--phone--12">
                     <p>You will also receive an email with the details and we will let you know when your order has shipped.</p>
                <br/>
                 <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. For assistance call Support at 1-800-867-5309, M - F, 9am - 8pm EST.</p>

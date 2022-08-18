@@ -35,13 +35,15 @@ export default function CheckoutStage1() {
             </Row>
             <Row className="mb-4">
               <h2 className="shipping-text">1. Shipping Information</h2>
-              <Form.Group className="aem-GridColumn aem-GridColumn--default--12 mr-5 aem-GridColumn--phone--12" controlId="formGridState">
+              <div className="aem-Grid aem-Grid--12">
+              <Form.Group className="aem-GridColumn aem-GridColumn--default--5 aem-GridColumn--phone--12" controlId="formGridState">
                 <Form.Label>State</Form.Label>
                 <Form.Select defaultValue="Choose...">
                   <option>Choose...</option>
                   <option>...</option>
                 </Form.Select>
               </Form.Group>
+              </div>
             </Row>
             <Row className="mb-3">
               <div className="aem-Grid aem-Grid--12">
@@ -114,7 +116,8 @@ export default function CheckoutStage1() {
             </Row>
           </Form>
         </div>
-        <div className="aem-GridColumn aem-GridColumn--default--5 aem-GridColumn--phone--12">
+        <div className="aem-GridColumn aem-GridColumn--default--1 aem-GridColumn--phone--12"></div>
+        <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12">
           <div className='signin-check cartdetails'>
             <div className="aem-Grid aem-Grid--12">
               <div className="aem-GridColumn aem-GridColumn--default--6">

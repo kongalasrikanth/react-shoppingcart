@@ -117,9 +117,10 @@ a{
   .check{
     background-color: #1f39ff;
     color: white;
-    padding: 9px 26px;
+    padding: 11px 33px;
     margin-top: 1rem;
     width: 100%;
+    line-height: 0px;
   }
   .paypal{
     background-color: transparent;
@@ -243,7 +244,7 @@ margin: 10px 10px !important;
 
 
 .pricing-card {
-  margin-left: 6px;
+  margin-left: 25px;
   border: 1px #D1D3D6 solid;
     padding: 2rem;
     // box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -1494,11 +1495,12 @@ a {
 
 .order {
   width: 100%;
+  border: 1px solid #D1D3D6;
   height: auto;
   padding: 2%;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: flex-start;
   margin-bottom: 20px;
 
   .text {
@@ -1666,6 +1668,7 @@ margin-left: 60px !important;
     }
     .review_btn{
       background-color: #1363DF !important;
+      width: 150px;
       p{
         color: #fff !important;
       }

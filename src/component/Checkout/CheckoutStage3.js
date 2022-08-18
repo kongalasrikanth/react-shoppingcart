@@ -108,7 +108,7 @@ export default function Review({ setFooter1 }) {
       <button className='main-btn btn-shipping-1-desktop'><p><Link to="/Checkout4">CONTINUE TO REVIEW ORDER</Link></p></button>
       <button className='main-btn btn-shipping-1-mobile'><p><Link to="/Checkout4">CONTINUE</Link></p></button>
         </div>
-        <div className="aem-GridColumn aem-GridColumn--default--5 aem-GridColumn--phone--12">
+        <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12">
           <div className="aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--12"></div>
           <div className='pricing-card' >
           <h5 className="shipping-text">Pricing Summary</h5>

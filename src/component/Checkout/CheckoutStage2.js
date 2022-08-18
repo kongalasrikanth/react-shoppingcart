@@ -1,6 +1,6 @@
-import React,{useEffect} from 'react'
+import React, { useEffect } from 'react'
 import edit from '../../Images/edit-2.jpg';
-import {Link}from 'react-router-dom';
+import { Link } from 'react-router-dom';
 export default function Guestcheckout({ setFooter1 }) {
   useEffect(() => {
     setFooter1(true);
@@ -44,25 +44,25 @@ export default function Guestcheckout({ setFooter1 }) {
             <h6 className='checkout_4 shipping-text'>2. Shipping Method</h6>
             <div>
               <div className="label-flex">
-              <input type="radio" id="html" value="HTML" />
-              <label for="html">Standard Shipping <span style={{fontWeight:400}}>(4-8 business days via USPS) FREE</span></label></div><br />
+                <input type="radio" id="html" value="HTML" />
+                <label for="html">Standard Shipping <span style={{ fontWeight: 400 }}>(4-8 business days via USPS) FREE</span></label></div><br />
               <div className="label-flex">
-              <input type="radio" id="html" value="HTML" />
-              <label for="html">Express Delivery <span style={{fontWeight:400}}>(2-5 business days via USPS) $17.95</span></label></div><br />
+                <input type="radio" id="html" value="HTML" />
+                <label for="html">Express Delivery <span style={{ fontWeight: 400 }}>(2-5 business days via USPS) $17.95</span></label></div><br />
               <div className="label-flex">
-              <input type="radio" id="html" value="HTML" />
-              <label for="html">Next Day Delivery <span style={{fontWeight:400}}>(Next business days via FedEx) $53.61</span></label></div><br />
+                <input type="radio" id="html" value="HTML" />
+                <label for="html">Next Day Delivery <span style={{ fontWeight: 400 }}>(Next business days via FedEx) $53.61</span></label></div><br />
               <button className='main-btn btn-shipping-1-desktop'><p><Link to="/Checkout3">CONTINUE TO PAYMENT</Link></p></button>
               <button className='main-btn btn-shipping-1-mobile'><p><Link to="/Checkout3">CONTINUE</Link></p></button>
-<h5 className="payment-text">
-              <p>3. Payment Information</p>
+              <h5 className="payment-text">
+                <p>3. Payment Information</p>
               </h5>
             </div></div>
-
-          <div className="aem-GridColumn aem-GridColumn--default--5 aem-GridColumn--phone--12">
+         
+          <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12">
             <div className="aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--12"></div>
             <div className='pricing-card' >
-            <h5 className="shipping-text">Pricing Summary</h5>
+              <h5 className="shipping-text">Pricing Summary</h5>
               <div className="aem-Grid aem-Grid--12">
                 <div className="aem-GridColumn aem-GridColumn--default--6 ">
                   <h6>Subtotal</h6>

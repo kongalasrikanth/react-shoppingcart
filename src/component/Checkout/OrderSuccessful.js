@@ -59,6 +59,7 @@ export default function Review(props ) {
             
                 
             <div className="order aem-Grid aem-Grid--12">
+                
             {cartItems.map((item) => (
                 <div key={item.id} className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12">
                 

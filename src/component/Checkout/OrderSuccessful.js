@@ -58,9 +58,12 @@ export default function Review(props ) {
             </div>
             
                 
-            <div className="order aem-Grid aem-Grid--12">
-                
-            {cartItems.map((item) => (
+          
+            
+                <div className="aem-Grid aem-Grid--12">
+                <div className="aem-GridColumn aem-GridColumn--default--8 aem-GridColumn--phone--12">
+                <div className="aem-Grid aem-Grid--12 order">
+                {cartItems.map((item) => (
                 <div key={item.id} className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12">
                 
            
@@ -78,10 +81,7 @@ export default function Review(props ) {
               </div>
               
               ))}
-            </div>
-            
-                <div className="aem-Grid aem-Grid--12">
-                <div className="aem-GridColumn aem-GridColumn--default--7 aem-GridColumn--phone--12">
+              </div>
                     <p>You will also receive an email with the details and we will let you know when your order has shipped.</p>
                <br/>
                 <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. For assistance call Support at 1-800-867-5309, M - F, 9am - 8pm EST.</p>

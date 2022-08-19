@@ -62,7 +62,7 @@ export default function Chekout(props) {
             </div>
           ))}
         </div>
-
+ 
         <br />
         <br />
         <div className="aem-GridColumn aem-GridColumn--default--4  aem-GridColumn--phone--12 cartdetails">
